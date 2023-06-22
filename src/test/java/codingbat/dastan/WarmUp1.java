@@ -1,4 +1,4 @@
 package codingbat.dastan;
 
-public class WarmUp {
+public class WarmUp1 {
 }
