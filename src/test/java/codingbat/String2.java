@@ -1,4 +1,4 @@
-package codingbat.nuta;
+package codingbat;
 
 public class String2 {
 }
