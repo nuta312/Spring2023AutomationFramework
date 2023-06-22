@@ -1,4 +1,4 @@
-package codingbat.allazor;
+package codingbat.allazor.warmup;
 
 public class SleepIn {
 }
