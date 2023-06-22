@@ -1,4 +1,4 @@
 package codingbat.kamila;
 
-public class Warmup1 g{
+public class Warmup1 {
 }
