@@ -1,5 +1,4 @@
-package codingbat.nuta;
+package chika;
 
 public class String1 {
-
 }
