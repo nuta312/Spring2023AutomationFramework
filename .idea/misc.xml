@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="MavenProjectsManager">
-    <option name="originalFiles">
-      <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-      </list>
-    </option>
-  </component>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
-=======
-=======
->>>>>>> origin/master
-=======
-  <component name="PDMPlugin">
-    <option name="customRuleSets">
-      <list>
-        <option value="$USER_HOME$/Downloads/gpp-automated-tests_new\.idea\code-analysis\pmd\quickstart.xml" />
-      </list>
-    </option>
-    <option name="skipTestSources" value="false" />
-  </component>
->>>>>>> origin/master
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
->>>>>>> origin/master
-    <output url="file://$PROJECT_DIR$/out" />
-  </component>
+    <component name="ExternalStorageConfigurationManager" enabled="true"/>
+    <component name="MavenProjectsManager">
+        <option name="originalFiles">
+            <list>
+                <option value="$PROJECT_DIR$/pom.xml"/>
+            </list>
+        </option>
+    </component>
+    <component name="PDMPlugin">
+        <option name="customRuleSets">
+            <list>
+                <option value="$USER_HOME$/Downloads/gpp-automated-tests_new\.idea\code-analysis\pmd\quickstart.xml"/>
+            </list>
+        </option>
+        <option name="scanFilesBeforeCheckin" value="true"/>
+        <option name="skipTestSources" value="false"/>
+    </component>
+    <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true"
+               project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
+        <output url="file://$PROJECT_DIR$/out"/>
+    </component>
 </project>
