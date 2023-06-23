@@ -9,7 +9,5 @@ public class WarmUp1 {
         }else return false;
     }
 
-    public void test1(){
-        System.out.println("asan");
-    }
+
 }

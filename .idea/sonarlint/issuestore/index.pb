@@ -1,3 +1,10 @@
 
-Z
-*src/test/java/codingbat/chika/String1.java,3/6/36fdd88245e0eab087d43e3f97b3894e6ace3e5f
+Y
+)src/test/java/codingbat/nuta/String1.java,3/8/38fc6f82c9269057be6c2e8de7ff86bc64f3e14a
+\
+,src/test/java/codingbat/altynai/WurmUp1.java,5/7/57ca529f63a8ab188274631e9f9d50c8dc314efa
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+c
+3src/test/java/codingbat/asanjr/warmup1/WarmUp1.java,3/2/322de6572799c46ece18b1e3f64bd5cb117ba52a
