@@ -1,11 +1,11 @@
-package codingbat.allazor.warmup;
+package codingbat.Janyla;
 
-public class SleepIn {
-
+public class Warmup1 {
     public boolean sleepIn(boolean weekday, boolean vacation) {
-        if (!weekday || vacation) {
+        if (!weekday || vacation){
             return true;
         }
+
         return false;
     }
 }
