@@ -1,6 +1,6 @@
-package codingbat.asan.warmap_1;
+package codingbat.asanjr.warmup1;
 
-public class SleepIn {
+public class WarmUp1 {
     public boolean sleepIn(boolean weekday, boolean vacation) {
         if (vacation == true){
             return true;
@@ -9,4 +9,7 @@ public class SleepIn {
         }else return false;
     }
 
+    public void test1(){
+        System.out.println("asan");
+    }
 }

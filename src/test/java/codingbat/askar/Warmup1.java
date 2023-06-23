@@ -1,4 +1,4 @@
-package codingbat.john;
+package codingbat.askar;
 
 public class Warmup1 {
 }
