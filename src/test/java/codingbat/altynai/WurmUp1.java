@@ -1,7 +1,12 @@
 package codingbat.altynai;
 
 public class WurmUp1 {
-    public static void main(String[] args) {
-        System.out.println("jsub");
+    public boolean sleepIn(boolean weekday, boolean vacation) {
+        if (!weekday||vacation){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
+
