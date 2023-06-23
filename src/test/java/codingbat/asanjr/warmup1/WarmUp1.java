@@ -9,7 +9,7 @@ public class WarmUp1 {
         }else return false;
     }
 
-    public static String Aygerim (){
-        return "test conflict";
+    public void test1(){
+        System.out.println("asan");
     }
 }
