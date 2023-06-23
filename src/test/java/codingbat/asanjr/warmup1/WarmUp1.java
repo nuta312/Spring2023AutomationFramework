@@ -8,4 +8,8 @@ public class WarmUp1 {
             return true;
         }else return false;
     }
+
+    public static String Aygerim (){
+        return "test conflict";
+    }
 }
