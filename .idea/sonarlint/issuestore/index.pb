@@ -6,5 +6,3 @@ Y
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-c
-3src/test/java/codingbat/asanjr/warmup1/WarmUp1.java,3/2/322de6572799c46ece18b1e3f64bd5cb117ba52a
