@@ -1,4 +1,4 @@
-package codingbat.kamila;
+package codingbat.Janyla;
 
 public class Warmup1 {
 }
