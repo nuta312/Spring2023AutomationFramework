@@ -31,6 +31,17 @@ public class WarmUp1 {
         String mid = str.substring(1, str.length()-1);
         return str.charAt(str.length()-1) + mid + str.charAt(0);
     }
+    public String front3(String str) {
+        String front;
+        if (str.length() >= 3){
+            front = str.substring (0,3);
+
+        }else {
+            front =str;
+        }
+        return front+front+front;
+    }
+
 }
 
 
