@@ -44,6 +44,17 @@ public class WarmUp1 {
     public boolean or35(int n) {
         return (n % 3==0)||(n %  5==0);
     }
+    public String front22(String str) {
+        int cut =2;
+
+        if (cut >str.length()){
+            cut=str.length();
+
+        }
+        String front=str.substring(0,cut);
+        return front+str+front;
+    }
+
 
 
 }
