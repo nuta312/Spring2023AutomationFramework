@@ -11,4 +11,12 @@ public class sumDouble {
         }
         return result;
     }
+
+
+    public boolean parrotTrouble(boolean talking, int hour) {
+        if(talking == true && (hour<=6 || hour>=21)){
+            return true;
+        } return false;
+    }
+
 }
