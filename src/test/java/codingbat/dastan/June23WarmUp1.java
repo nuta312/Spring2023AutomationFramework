@@ -1,6 +1,6 @@
 package codingbat.dastan;
 
-public class June23 {
+public class June23WarmUp1 {
     public boolean sleepIn(boolean weekday, boolean vacation) {
         if (!weekday || vacation) {
             return true;
