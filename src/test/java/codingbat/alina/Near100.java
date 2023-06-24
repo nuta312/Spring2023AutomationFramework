@@ -45,5 +45,12 @@ public class Near100 {
         else{
             return str.substring(str.length()-1)+str.substring(0)+str.substring(str.length()-1);
         }}
-
+    public boolean or35(int n) {
+        if(n%3==0||n%5==0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
