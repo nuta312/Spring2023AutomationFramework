@@ -38,4 +38,12 @@ public class Near100 {
             return str.substring(0,3)+str.substring(0,3)+str.substring(0,3);
         }
     }
+    public String backAround(String str) {
+        if(str.length()<=1){
+            return str+str+str;
+        }
+        else{
+            return str.substring(str.length()-1)+str.substring(0)+str.substring(str.length()-1);
+        }}
+
 }
