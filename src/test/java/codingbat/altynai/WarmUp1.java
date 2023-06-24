@@ -31,6 +31,47 @@ public class WarmUp1 {
         String mid = str.substring(1, str.length()-1);
         return str.charAt(str.length()-1) + mid + str.charAt(0);
     }
+    public String front3(String str) {
+        String front;
+        if (str.length() >= 3){
+            front = str.substring (0,3);
+
+        }else {
+            front =str;
+        }
+        return front+front+front;
+    }
+    public boolean or35(int n) {
+        return (n % 3==0)||(n %  5==0);
+    }
+    public String front22(String str) {
+        int cut =2;
+
+        if (cut >str.length()){
+            cut=str.length();
+
+        }
+        String front=str.substring(0,cut);
+        return front+str+front;
+    }
+    public boolean startHi(String str) {
+        if (str.length() < 2) return false;
+        String firstTwo = str.substring(0, 2);
+        if (firstTwo.equals("hi")) {
+            return true;
+
+        } else {
+            return false;
+        }
+    }
+    public boolean icyHot(int temp1, int temp2) {
+        if ((temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
 
 
