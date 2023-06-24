@@ -54,7 +54,15 @@ public class WarmUp1 {
         String front=str.substring(0,cut);
         return front+str+front;
     }
+    public boolean startHi(String str) {
+        if (str.length()<2) return false;
+        String firstTwo=str.substring(0,2);
+        if (firstTwo.equals("hi")){
+            return true;
 
+        }else{
+            return false;
+        }
 
 
 }
