@@ -53,5 +53,4 @@ public class WarmUp1 {
             return (a<0&&b>0)||(a>0&&b<0);
         }
     }
-
 }
