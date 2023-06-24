@@ -55,15 +55,22 @@ public class WarmUp1 {
         return front+str+front;
     }
     public boolean startHi(String str) {
-        if (str.length()<2) return false;
-        String firstTwo=str.substring(0,2);
-        if (firstTwo.equals("hi")){
+        if (str.length() < 2) return false;
+        String firstTwo = str.substring(0, 2);
+        if (firstTwo.equals("hi")) {
             return true;
 
-        }else{
+        } else {
             return false;
         }
-
+    }
+    public boolean icyHot(int temp1, int temp2) {
+        if ((temp1 < 0 && temp2 > 100) || (temp1 > 100 && temp2 < 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
 
