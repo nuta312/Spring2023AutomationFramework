@@ -23,6 +23,35 @@ public class sumDouble {
         String back= str.substring(n+1, str.length());
         return front+back;
     }
+    public String frontBack(String str) {
+        String result="";
+        if(str.length()>=2){
+            String a = str.substring(0, 1);
+            String b = str.substring(str.length() - 1, str.length());
+            result = b + str.substring(1, str.length() - 1)+a;
+        }if (str.length()<=1){
+            result=str;
+        }
+        return result;
+
+    }
+    public String front3(String str) {
+        String result= "";
+        if (str.length()>=3){
+            String a= str.substring(0, 3);
+            result= a+a+a;
+        }
+        if (str.length()==2){
+            String b= str.substring(0, 2);
+            result= b+b+b;
+        }
+        if (str.length()==1){
+            String s= str.substring(0, 1);
+            result= s+s+s;
+
+        }return result;
+
+    }
 
 
 }
