@@ -6,4 +6,12 @@ public class Near100 {
         public boolean nearHundred(int n) {
             return ((Math.abs(100-n)<=10)||(Math.abs(200-n)<=10));
         }
+    public String notString(String str) {
+        if(!(str.startsWith("not"))){
+            return "not "+ str;
+        }
+        else{
+            return str;
+        }
+    }
 }
