@@ -19,4 +19,15 @@ public class Near100 {
         sb.deleteCharAt(n);
         return sb.toString();
     }
+    public String frontBack(String str) {
+        if(str.length()==1||str==""){
+            return str;
+        }
+        else{
+            char first = str.charAt(0);
+            char last = str.charAt(str.length() - 1);
+            String middle = str.substring(1, str.length() - 1);
+            return last + middle + first;
+        }
+    }
 }
