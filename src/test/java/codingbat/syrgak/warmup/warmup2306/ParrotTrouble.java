@@ -1,4 +1,4 @@
-package codingbat.syrgak.warmup;
+package codingbat.syrgak.warmup.warmup2306;
 
 public class ParrotTrouble {
     public boolean parrotTrouble(boolean talking, int hour) {
