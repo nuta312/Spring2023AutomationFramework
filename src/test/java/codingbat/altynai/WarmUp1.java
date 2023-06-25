@@ -94,6 +94,10 @@ public class WarmUp1 {
         }
         return str;
     }
+    public boolean mixStart(String str) {
+        return  str.startsWith("ix",1);
+
+    }
 }
 
 
