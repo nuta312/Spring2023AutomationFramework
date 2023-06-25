@@ -98,6 +98,15 @@ public class WarmUp1 {
         return  str.startsWith("ix",1);
 
     }
+    public String startOz(String str) {
+        String result = "";
+        if( str.startsWith ("o",0 )) {   result= "o";
+        }
+        if (str.startsWith ("z",1 )){   result ="z";
+        }  if (str.startsWith ("oz",0 )){
+            result ="oz";
+        }return result;
+    }
 }
 
 
