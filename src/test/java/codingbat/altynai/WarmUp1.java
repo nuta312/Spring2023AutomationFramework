@@ -83,6 +83,13 @@ public class WarmUp1 {
                 (b>=13 && b<=19) ||
                 (c>=13 && c<=19);
     }
+    public boolean loneTeen(int a, int b) {
+        boolean at= (a>=13 && a<=19);
+        boolean bt= (b<=19 && b>=13);
+        return (at && !bt) || (!at &&bt);
+    }
+
 }
+
 
 
