@@ -105,4 +105,12 @@ public class Task10 {
             return false;
         }
     }
+    public String endUp(String str) {
+        if (str.length() < 3) {
+            return str.toUpperCase();
+        } else {
+            return str.substring(0,str.length()-3).concat(str.toUpperCase().substring(str.length()-3));
+        }
+
+    }
 }
