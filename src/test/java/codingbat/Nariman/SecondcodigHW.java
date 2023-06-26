@@ -12,25 +12,33 @@ public class SecondcodigHW {
             return true;
         return false;
     }
+
     public boolean nearHundred(int n) {
         return ((Math.abs(100 - n) <= 10) ||
                 (Math.abs(200 - n) <= 10));
     }
-    public boolean posNeg(int a, int b, boolean negative) {
-        if(negative){
-            return (a<0 && b<0);
-        }else {return ((a<0&&b>0) || (a>0 && b<0));}
 
-        public String notString(String str) {
-            if(str.length()>=3&& str.substring(0,3).equals("not")){
+    public boolean posNeg(int a, int b, boolean negative) {
+        if (negative) {
+            return (a < 0 && b < 0);
+        } else {
+            return ((a < 0 && b > 0) || (a > 0 && b < 0));
+        }
+    }
+
+        public String notString (String str){
+            if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
                 return str;
-            }else{return "not "+str;}
+            } else {
+                return "not " + str;
+            }
         }
 
-        public String missingChar(String str, int n) {
-            String front = str.substring(0,n);
-            String back = str.substring(n+1, str.length());
-            return front+back;}
+        public String missingChar (String str,int n){
+            String front = str.substring(0, n);
+            String back = str.substring(n + 1, str.length());
+            return front + back;
+        }
 
     }
 
