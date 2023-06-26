@@ -63,4 +63,61 @@ public class Task10 {
         return 0;
 
     }
+    public boolean in3050(int a, int b) {
+        if(a>=30&&a<=40&&b>=30&&b<=40){
+            return true;
+        }
+        else if(a>=40&&a<=50&&b>=40&&b<=50){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public int max1020(int a, int b) {
+        if (b > a) {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+        if (a >= 10 && a <= 20){
+            return a;
+        }
+        if (b >= 10 && b <= 20){
+            return b;
+        }
+        return 0;
+    }
+    public boolean stringE(String str) {
+        int count=0;
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)=='e'){
+                count++;
+            }
+        }
+        return (count>=1&&count<=3);
+    }
+    public boolean lastDigit(int a, int b) {
+        if(a%10==b%10){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public String endUp(String str) {
+        if (str.length() < 3) {
+            return str.toUpperCase();
+        } else {
+            return str.substring(0,str.length()-3).concat(str.toUpperCase().substring(str.length()-3));
+        }
+
+    }
+    public String everyNth(String str, int n) {
+        String result = "";
+        for (int i = 0; i < str.length(); i=i+n) {
+            result = result + str.charAt(i);
+        }
+        return result;
+    }
 }
