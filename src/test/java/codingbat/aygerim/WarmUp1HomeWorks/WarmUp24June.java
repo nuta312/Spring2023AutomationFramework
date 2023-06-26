@@ -31,4 +31,31 @@ public class WarmUp24June {
     String front = str.substring(0, take);
   return front + str + front;
 }
+    public boolean startHi(String str) {
+        if (str.startsWith("hi")){
+            return true;
+        }
+        return false;
+    }
+    public boolean icyHot(int temp1, int temp2) {
+        if((temp1<0 && temp2 > 100)||(temp1>100 && temp2<0)){
+            return true;
+        } return false;
+    }
+    public boolean in1020(int a, int b) {
+        if ((a>=10 && a<=20) || (b>=10 && b<=20)){
+            return true;
+        } return false;
+    }
+    public boolean hasTeen(int a, int b, int c) {
+        if ((a>=13 && a<=19) || (b>=13 && b<=19) || (c>=13 && c<=19)){
+            return true;
+        } return false;
+    }
+    public boolean loneTeen(int a, int b) {
+        boolean aTeen = (a >= 13 && a <= 19);
+        boolean bTeen = (b >= 13 && b <= 19);
+
+        return (aTeen && !bTeen) || (!aTeen && bTeen);
+    }
 }
