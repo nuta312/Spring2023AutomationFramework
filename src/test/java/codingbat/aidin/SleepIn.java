@@ -1,13 +1,10 @@
-package codingbat.abdusamat;
+package codingbat.aidin;
 
-public class WarmUp1 {
+public class SleepIn {
     public boolean sleepIn(boolean weekday, boolean vacation) {
-        if (!weekday || vacation) {
+        if (weekday == false || vacation == true){
             return true;
         }
-
         return false;
-
     }
-
 }
