@@ -25,4 +25,19 @@ public class Task10 {
             return false;
         }
     }
+
+    public String startOz(String str) {
+        if(str.length()==0){
+            return "";}
+        if(str.startsWith("oz")){
+            return str.substring(0,2);
+        } else if (str.charAt(0)=='o') {
+            return str.substring(0,1);
+        } else if (str.charAt(1)=='z') {
+            return str.substring(1,2);
+        }
+        else{
+            return "";
+        }
+    }
 }
