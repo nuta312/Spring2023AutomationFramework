@@ -97,4 +97,12 @@ public class Task10 {
         }
         return (count>=1&&count<=3);
     }
+    public boolean lastDigit(int a, int b) {
+        if(a%10==b%10){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
