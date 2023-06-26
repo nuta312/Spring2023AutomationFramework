@@ -51,4 +51,16 @@ public class Task10 {
         }
         return max;
     }
+    public int close10(int a, int b) {
+        int ad=Math.abs(10-a);
+        int bd=Math.abs(10-b);
+        if(ad<bd){
+            return a;
+        }
+        if(ad>bd){
+            return b;
+        }
+        return 0;
+
+    }
 }
