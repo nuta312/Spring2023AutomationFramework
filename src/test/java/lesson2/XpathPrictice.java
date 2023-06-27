@@ -42,7 +42,7 @@ public class XpathPrictice extends BaseTest{
 void xpathtonexttag()
 {
     driver.get("https://demoqa.com/text-box");
-    String nexttag1 = driver.findElement(By.xpath("/div[@id='userName-wrapper']/div[1]/following-sibling::div")).getText();
+    String nexttag1 = driver.findElement(By.xpath("//div[@id='userName-wrapper']/div[1]/following-sibling::div")).getText();
     System.out.println(nexttag1);
 }
 

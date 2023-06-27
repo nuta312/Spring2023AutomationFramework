@@ -40,8 +40,9 @@ public class Locators extends BaseTest {
     }
     @Test
     void cssTest(){
-        driver.get("https://demoqa.com/automation-practice-form");
-        driver.findElement(By.cssSelector("userName")).sendKeys("sometext");
+        driver.get("https://demoqa.com/text-box");
+        driver.findElement(By.cssSelector("#userName")).sendKeys("Some text");
+
 
     }
 }
