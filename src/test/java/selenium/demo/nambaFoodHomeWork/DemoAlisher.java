@@ -13,7 +13,7 @@ import java.time.Duration;
 public class DemoAlisher {
 
     @Test
-    public void NambaFoodDemoTest(){
+    public void NambaFoodDemoTest() {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -51,23 +51,6 @@ public class DemoAlisher {
         WebElement submitBtn = driver.findElement(By.id("payment_cash"));
         WebElementActions.scrollToElement(driver, submitBtn);
         submitBtn.click();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
