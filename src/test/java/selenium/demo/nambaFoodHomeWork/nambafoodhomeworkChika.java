@@ -8,13 +8,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
 public class nambafoodhomeworkChika {
     @Test
-    public void testWeb (){
+    public void testWeb() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -48,12 +49,12 @@ public class nambafoodhomeworkChika {
         WebElement addinfo = driver.findElement(By.xpath("//div[@class='order--form-item order--line-title'][4]//div[@class='input--wrap']/textarea"));
         addinfo.sendKeys("Если что дома есть злая собака будьте осторожны");
         WebElement cashPay = driver.findElement(By.xpath("(//div[@class='input--wrap'])[5]/input"));
-        WebElementActions.scrollToElement(driver,cashPay);
+        WebElementActions.scrollToElement(driver, cashPay);
         cashPay.sendKeys("2000");
         WebElement finalorder = driver.findElement(By.xpath("(//div[@class='order--actions'])[3]/button"));
         finalorder.click();
-
-
+        WebElement result = driver.findElement(By.xpath("//div[@class='sum-item--count price-total']//span"));
+        Assert.assertTrue(result.getText().equals("520"));
 
     }
 }
