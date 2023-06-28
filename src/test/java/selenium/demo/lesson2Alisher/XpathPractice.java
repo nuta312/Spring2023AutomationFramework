@@ -42,12 +42,6 @@ public class XpathPractice extends BaseTest {
     }
 
     @Test
-    void xpathSwitchToFollowSiblingTest() {
-        driver.get("https://demoqa.com/text-box");
-        String currentAddress = driver.findElement(By.xpath("//div[@id='userName-wrapper']/div[1]/following-sibling::div")).getText();
-        System.out.println(currentAddress);
-    }
-    @Test
     void xpathUsingIndexTest(){
         WebElement element = driver.findElement(By.xpath("(//label [@class='form-label'])[3]"));
 
