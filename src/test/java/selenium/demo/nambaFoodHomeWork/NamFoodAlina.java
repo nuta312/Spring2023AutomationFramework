@@ -24,7 +24,7 @@ public class NamFoodAlina {
    WebElementActions.scrollToElement(driver, submitBtn);
    submitBtn.click();
 
-//   WebElement submitBtn2 = driver.findElement(By.xpath());
+//  WebElement submitBtn2 = driver.findElement(By.xpath());
 //    WebElementActions.scrollToElement(driver, submitBtn2);
 //    submitBtn2.click();
 //
