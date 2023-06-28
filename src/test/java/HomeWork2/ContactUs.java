@@ -1,9 +1,10 @@
 package HomeWork2;
 
+import lesson2.BaseTest;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class ContactUs extends selenium.demo.lesson2.BaseTest {
+public class ContactUs extends BaseTest {
         @Test
         public void testWeb(){
             driver.get("https://nambafood.kg/");
