@@ -30,7 +30,48 @@ public class Checkbox extends BaseTest {
         if (downloads.isEnabled()){
             System.out.println("downloads yes");
         }
+    }
+    @Test
+    public void secondTest(){
+        driver.get("https://demoqa.com/checkbox");
+        WebElement down = driver.findElement(By.xpath("//button[@aria-label=\"Toggle\"]"));
+        down.click();
 
+        WebElement desktop = driver.findElement(By.xpath("(//button[@aria-label=\"Toggle\"])[2]"));
+        desktop.click();
+
+        WebElement documents = driver.findElement(By.xpath("(//button[@aria-label=\"Toggle\"])[3]"));
+        documents.click();
+
+        WebElement downloads = driver.findElement(By.xpath("(//button[@aria-label=\"Toggle\"])[6]"));
+        downloads.click();
+        // открытие всех вкладок
+
+        driver.findElement(By.xpath("//label[@for=\"tree-node-notes\"]")).click(); // Notes click
+        driver.findElement(By.xpath("//label[@for=\"tree-node-commands\"]")).click(); // Commands click
+        WebElement desktopRes = driver.findElement(By.xpath("//label[@for=\"tree-node-desktop\"]"));
+        Assert.assertTrue(desktopRes.isEnabled());
+        if (desktopRes.isEnabled()){
+            System.out.println("desktop Enabled");
+        }
+        // DesktopRes
+
+        driver.findElement(By.xpath("//label[@for=\"tree-node-workspace\"]")).click();// workspace click
+        driver.findElement(By.xpath("//label[@for=\"tree-node-office\"]")).click();// office click
+        WebElement documentsRes = driver.findElement(By.xpath("//label[@for=\"tree-node-documents\"]"));
+        Assert.assertTrue(documentsRes.isEnabled());
+        if (documentsRes.isEnabled()){
+            System.out.println("documents Enabled");
+        }
+        // DocumentsRes
+
+        driver.findElement(By.xpath("//label[@for=\"tree-node-wordFile\"]")).click();// wordFile click
+        driver.findElement(By.xpath("//label[@for=\"tree-node-excelFile\"]")).click();// excelFile click
+        WebElement downloadsRes = driver.findElement(By.xpath("//label[@for=\"tree-node-downloads\"]"));
+        Assert.assertTrue(downloadsRes.isEnabled());
+        if (downloadsRes.isEnabled()){
+            System.out.println("downloads Enabled");
+        }
 
     }
 }
