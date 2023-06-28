@@ -16,6 +16,20 @@ public class Checkbox extends BaseTest {
 
         WebElement desktop = driver.findElement(By.xpath("//label[@for=\"tree-node-desktop\"]"));
         Assert.assertTrue(desktop.isEnabled());
+        if (desktop.isEnabled()){
+            System.out.println("desktop yes");
+        }
+
+        WebElement documents = driver.findElement(By.xpath("//label[@for=\"tree-node-documents\"]"));
+        Assert.assertTrue(documents.isEnabled());
+        if (documents.isEnabled()){
+            System.out.println("documents yes");
+        }
+        WebElement downloads = driver.findElement(By.xpath("//label[@for=\"tree-node-downloads\"]"));
+        Assert.assertTrue(downloads.isEnabled());
+        if (downloads.isEnabled()){
+            System.out.println("downloads yes");
+        }
 
 
     }
