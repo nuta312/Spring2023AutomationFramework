@@ -73,5 +73,10 @@ public class Checkbox extends BaseTest {
             System.out.println("downloads Enabled");
         }
 
+        WebElement res = driver.findElement(By.xpath("//div[@class=\"display-result mt-4\"]"));
+        Assert.assertEquals(res.getText(), "You have selected :\n" +
+                "home\n" + "desktop\n" + "notes\n" + "commands\n" + "documents\n" + "workspace\n" +
+                "react\n" + "angular\n" + "veu\n" + "office\n" + "public\n" + "private\n" +
+                "classified\n" + "general\n" + "downloads\n" + "wordFile\n" + "excelFile" );
     }
 }
