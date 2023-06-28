@@ -2,18 +2,23 @@ package selenium.demo;
 
 import com.digitalnomads.selenium.WebElementActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+
+import org.junit.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import java.time.Duration;
+
+
+
 
 public class SeleniumIntro {
     @Test
-    public void textBoxTest (){
+    public void textBoxTest() {
 
         WebDriverManager.chromedriver().setup();// setup chrome driver
         WebDriver driver = new ChromeDriver();
@@ -34,7 +39,7 @@ public class SeleniumIntro {
         permanentAddress.sendKeys("Trump Tower");
 
         WebElement submitBtn = driver.findElement(By.id("submit"));
-        WebElementActions.scrollToElement(driver,submitBtn);
+        WebElementActions.scrollToElement(driver, submitBtn);
         submitBtn.click();
 
         WebElement resultName = driver.findElement(By.id("name"));
@@ -48,6 +53,8 @@ public class SeleniumIntro {
 
         WebElement resultpermanentAddress = driver.findElement(By.xpath("//p[@id='permanentAddress']"));
         Assert.assertTrue(resultpermanentAddress.getText().contains("Trump Tower"));
+
+
 
     }
 }
