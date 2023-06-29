@@ -3,6 +3,7 @@ package selenium.demo.nambaFoodHomeWork.tilekNamba;
 import com.digitalnomads.selenium.WebElementActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -49,10 +50,8 @@ public class DemoByTilek {
         Assert.assertEquals(firstNameLastNameFill.getAttribute("value"), "James Bond");
 
         WebElement address = driver.findElement(By.id("food_order_address"));
-        address.sendKeys("Erkindik blvrd. 21");
-        address.click();
-        address.click();
-        address.click();
+        address.sendKeys("Erkindik blvrd. 21", Keys.ENTER);
+
 
 
         WebElement floorApartment = driver.findElement(By.id("food_order_door_code"));
