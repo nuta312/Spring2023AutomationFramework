@@ -1,8 +1,6 @@
 package selenium.demo.nambaFoodHomeWork.asanJr;
 
 import com.digitalnomads.selenium.WebElementActions;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,7 +29,7 @@ public class AsanNamba {
 
         WebElement ustaRestaurant = driver.findElement(By.xpath("//a[@href=\"/usta-turkish-restaurant\"]"));
         WebElementActions.scrollToElement(driver, ustaRestaurant);
-        WebElementActions.clickJS(driver, ustaRestaurant);
+//        WebElementActions.clickJS(driver, ustaRestaurant);
 
         WebElement danaPirzola = driver.findElement(By.xpath("(//button[@type=\"submit\"])[5]"));
         danaPirzola.click();
