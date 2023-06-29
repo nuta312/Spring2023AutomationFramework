@@ -1,4 +1,4 @@
-package selenium.demo.nambaFoodHomeWork;
+package selenium.demo.nambaFoodHomeWork.asanJr;
 
 import com.digitalnomads.selenium.WebElementActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -20,8 +20,6 @@ public class AsanNamba {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        Actions actions = new Actions(driver);
-
         driver.get("https://nambafood.kg/");
 
         WebElement food = driver.findElement(By.xpath("//li//a[normalize-space()='Еда']"));
@@ -64,7 +62,7 @@ public class AsanNamba {
         WebElement userName = driver.findElement(By.xpath("//input[@id=\"food_order_client_name\"]"));
         userName.sendKeys(name);
 
-        String address = "Тоголок";
+        String address = "Тоголо";
         WebElement userAddress = driver.findElement(By.xpath("//input[@id=\"food_order_address\"]"));
         userAddress.sendKeys(address);
 
@@ -128,7 +126,7 @@ public class AsanNamba {
 
 
         WebElement resultTimeDelivery = driver
-                .findElement(By.xpath("Как можно скорее"));
+                .findElement(By.xpath("//span[text()='Время доставки:']//following-sibling::span"));
         Assert.assertEquals(resultTimeDelivery.getText(), "Как можно скорее");
 
     }
