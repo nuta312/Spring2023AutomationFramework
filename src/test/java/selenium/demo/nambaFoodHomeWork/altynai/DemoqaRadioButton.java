@@ -1,14 +1,11 @@
 package selenium.demo.nambaFoodHomeWork.altynai;
 
 import com.digitalnomads.selenium.WebElementActions;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import selenium.demo.lesson2.BaseTest;
-
-import java.time.Duration;
 
 public class DemoqaRadioButton extends BaseTest {
     @Test
