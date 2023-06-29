@@ -1,4 +1,4 @@
-package codingbat.syrgak.warmup;
+package codingbat.syrgak.warmup.warmup2306;
 
 public class SumDouble {
     public int sumDouble(int a, int b) {

@@ -71,7 +71,113 @@ public class WarmUp1 {
             return false;
         }
     }
+    public boolean in1020(int a, int b) {
+        if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public boolean hasTeen(int a, int b, int c) {
+        return (a>=13 && a<=19) ||
+                (b>=13 && b<=19) ||
+                (c>=13 && c<=19);
+    }
+    public boolean loneTeen(int a, int b) {
+        boolean at= (a>=13 && a<=19);
+        boolean bt= (b<=19 && b>=13);
+        return (at && !bt) || (!at &&bt);
+    }
+    public String delDel(String str) {
+        if (str.length()>=4 && str.substring (1,4).equals("del")){
+            return str.substring(0,1)+str.substring(4);
+        }
+        return str;
+    }
+    public boolean mixStart(String str) {
+        return  str.startsWith("ix",1);
+
+    }
+    public String startOz(String str) {
+        String result = "";
+        if( str.startsWith ("o",0 )) {   result= "o";
+        }
+        if (str.startsWith ("z",1 )){   result ="z";
+        }  if (str.startsWith ("oz",0 )){
+            result ="oz";
+        }return result;
+    }
+    public int intMax(int a, int b, int c) {
+        int max;
+        if (a>b){
+            max =a;
+        }else{
+            max=b;
+        }if (max<c){
+            max=c;
+        } return max;
+    }
+    public int close10(int a, int b) {
+        int diffA = Math.abs(a - 10);
+        int diffB = Math.abs(b - 10);
+
+        if (diffA < diffB) {
+            return a;
+        } else if (diffB < diffA) {
+            return b;
+        } else {
+            return 0;
+        }
+    }
+    public boolean in3050(int a, int b) {
+        if (a>=30 && a<=40 && b>=30 && b<=40) {
+            return true;
+        } if (a>=40 && a<=50 && b>=40 && b<=50) {
+            return true;
+        } else{
+            return false;
+        }
+    }
+    public int max1020(int a, int b) {
+        if (b>a){
+            int temp=a;
+            a=b;
+            b=temp;
+        }
+
+        if (a>=10 && a<=20) return a;
+        if (b>=10 && b<=20) return b;
+        return 0;
+    }
+    public boolean stringE(String str) {
+
+        int count=0;
+        for (int i=0; i<str.length(); i++) {
+            if (str.charAt (i)=='e') count++;
+
+        }
+        return (count >=1 && count <=3);
+    }
+    public boolean lastDigit(int a, int b) {
+        return(a % 10 == b % 10);
+    }
+    public String endUp(String str) {
+        if (str.length() <= 3) {
+            return str.toUpperCase();
+        } else {
+            String lastThreeChars = str.substring(str.length() - 3);
+            return str.substring(0, str.length() - 3) + lastThreeChars.toUpperCase();
+        }
+    }
+    public String everyNth(String str, int n) {
+        String result="";
+        for (int i=0; i<str.length(); i=i+n) {
+            result =result+str. charAt(i);
+
+        } return result;
+    }
 
 }
+
 
 
