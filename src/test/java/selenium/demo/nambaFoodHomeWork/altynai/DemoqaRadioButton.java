@@ -44,6 +44,7 @@ public class DemoqaRadioButton extends BaseTest {
         Assert.assertTrue(resultСheckMarkButtonClassified.getText().contains("classified"));
         WebElement resultСheckMarkButtonGeneral= driver.findElement(By.xpath("//span[text()='general']"));
         Assert.assertTrue(resultСheckMarkButtonGeneral.getText().contains("general"));
+        Assert.assertTrue(officeButton.isEnabled());
 
 
 
