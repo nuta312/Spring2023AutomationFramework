@@ -1,3 +1,4 @@
+
 package codingbat.Nariman;
 
 public class SecondcodigHW {
@@ -21,6 +22,9 @@ public class SecondcodigHW {
             return (a<0 && b<0);
         }else {return ((a<0&&b>0) || (a>0 && b<0));}
 
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
         public String notString(String str) {
             if(str.length()>=3&& str.substring(0,3).equals("not")){
                 return str;
@@ -33,5 +37,7 @@ public class SecondcodigHW {
             return front+back;}
 
     }
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
