@@ -1,12 +1,12 @@
 package selenium.demo.nambaFoodHomeWork.syrgak.lesson2.demoqa;
 
-import lesson2.BaseTest;
 import org.junit.Assert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+import selenium.demo.lesson2.BaseTest;
 
 public class CheckBoxTestSyrgak extends BaseTest {
     @Test
@@ -36,15 +36,8 @@ public class CheckBoxTestSyrgak extends BaseTest {
         clickDownloads.click();
         WebElement clickDownloads2 = driver.findElement(By.xpath("//label[@for='tree-node-downloads']//span[@class='rct-checkbox']//*[name()='svg']"));
         clickDownloads2.click();
-
-
-
-
-
-
-
-
-//        Assert.assertTrue(result.getText().contains("You have selected yes"));
-//        Assert.assertTrue(yesRadioBtn.isEnabled());
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@id='result']")).isDisplayed());
+//        Assert.assertTrue(result.getText().contains("You have selected : home,desktop,notes,commands,documents,workspace,react,angular,veu,office,public,private,classified,general,downloads,wordFile, excelFile"));
+//        Assert.assertTrue(clickHome.isEnabled());
     }
 }

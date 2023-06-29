@@ -21,9 +21,10 @@ public abstract class BaseTest {
     }
 
     @AfterClass
-    public void tearDown(){
+    public void tearDown() {
         driver.close();
         driver.quit();
     }
-
 }
+
+
