@@ -50,6 +50,5 @@ public class SeleniumIntro {
 
         WebElement resultPermanentAddress = driver.findElement(By.xpath("//p[@id='permanentAddress']"));
         Assert.assertTrue(resultPermanentAddress.getText().contains("Trump Tower"));
-
     }
 }
