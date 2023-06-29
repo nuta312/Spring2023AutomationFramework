@@ -1,5 +1,4 @@
 package selenium.demo.nambaFoodHomeWork.baiasov;
-import com.digitalnomads.selenium.WebElementActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -30,12 +29,25 @@ public class NambaFoodHW {
         WebElement indiPappaRotiBtn = driver.findElement(By.xpath("/html/body/main/section[3]/div[2]/div[2]/a[1]"));
         indiPappaRotiBtn.click();
 
-        WebElement chanBaturaOrder = driver.findElement(By.xpath("//*[@id=\"199\"]/div/div[1]/div[1]/div[1]"));
+        WebElement chanBaturaOrder = driver.findElement(By.xpath("//*[@id=\"199\"]/div/div[1]/div[2]/button"));
         chanBaturaOrder.click();
-        WebElement puriOrder = driver.findElement(By.xpath("//*[@id=\"199\"]/div/div[2]/div[1]/div[1]"));
-        puriOrder.click();
+//      WebElement puriOrder = driver.findElement(By.xpath("//*[@id=\"199\"]/div/div[2]/div[1]/div[1]"));
+//      puriOrder.click();
 
-//        WebElement alreadyChoosed = driver.findElement(By.xpath("//*[@id=\"cart\"]"));
+        WebElement alreadyChoosed = driver.findElement(By.xpath("//*[@id=\"cart\"]"));
+        alreadyChoosed.click();
+        WebElement makeOrder = driver.findElement(By.xpath("//button[@class='order--btn order--access']"));
+        makeOrder.click();
+
+        //Оформление заказа
+        WebElement userName = driver.findElement(By.xpath("//*[@id=\"food_order_client_name\"]"));
+        userName.sendKeys("Alan Santi");
+
+        WebElement userAdress = driver.findElement(By.xpath("//*[@id=\"food_order_address\"]"));
+        userAdress.sendKeys("Lodz Poland");
+
+        WebElement userFlat = driver.findElement(By.xpath("//*[@id=\"food_order_door_code\"]"));
+        userFlat.sendKeys("127/134");
 
 
 
