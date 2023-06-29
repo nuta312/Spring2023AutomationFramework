@@ -1,6 +1,5 @@
 package selenium.demo.nambaFoodHomeWork.tilekNamba;
 
-import com.digitalnomads.selenium.WebElementActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
