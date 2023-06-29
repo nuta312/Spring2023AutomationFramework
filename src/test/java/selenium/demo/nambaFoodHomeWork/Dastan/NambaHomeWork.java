@@ -1,4 +1,4 @@
-package selenium.demo.nambaFoodHomeWork.DastanNamba;
+package selenium.demo.nambaFoodHomeWork.Dastan;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
