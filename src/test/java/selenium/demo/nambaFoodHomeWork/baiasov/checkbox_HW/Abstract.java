@@ -1,4 +1,4 @@
-package selenium.demo.nambaFoodHomeWork.baiasov.lesson2;
+package selenium.demo.nambaFoodHomeWork.baiasov.checkbox_HW;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +8,8 @@ import org.testng.annotations.BeforeClass;
 
 import java.time.Duration;
 
-public abstract class BaseTest {
+public abstract class Abstract {
+
     public WebDriver driver;
     @BeforeClass
     public void setUpBrowser(){
