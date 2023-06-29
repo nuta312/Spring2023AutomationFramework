@@ -18,7 +18,7 @@ public abstract class BaseTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
-        driver.get("https://demoqa.com/checkbox");
+
     }
 
     @AfterClass
