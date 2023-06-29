@@ -18,6 +18,11 @@ public class SecondcodigHW {
                 (Math.abs(200 - n) <= 10));
     }
     public boolean posNeg(int a, int b, boolean negative) {
+<<<<<<< HEAD
+        if(negative){
+            return (a<0 && b<0);
+        }else {return ((a<0&&b>0) || (a>0 && b<0));}}
+=======
         if (negative) {
             return (a < 0 && b < 0);
         } else {
@@ -27,6 +32,7 @@ public class SecondcodigHW {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> origin/master
 
 =======
 >>>>>>> origin/master
@@ -34,13 +40,14 @@ public class SecondcodigHW {
         public String notString(String str) {
             if(str.length()>=3&& str.substring(0,3).equals("not")){
                 return str;
-            }else{return "not "+str;}
-        }
+            }else{
+                return "not "+ str;}
+
 
         public String missingChar(String str, int n) {
             String front = str.substring(0,n);
             String back = str.substring(n+1, str.length());
             return front+back;}
 
-    }
+    }}
 
