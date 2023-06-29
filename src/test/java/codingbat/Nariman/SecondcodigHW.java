@@ -26,34 +26,15 @@ public class SecondcodigHW {
         } else {
             return ((a < 0 && b > 0) || (a > 0 && b < 0));
         }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
-    }
-        public String notString(String str) {
-            if(str.length()>=3&& str.substring(0,3).equals("not")){
-=======
-
 
     }
 
-    public String notString(String str){
-            if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
->>>>>>> origin/master
-                return str;
-            } else {
-                return "not " + str;
-            }
-        }
-
-        public String missingChar (String str,int n){
-            String front = str.substring(0, n);
-            String back = str.substring(n + 1, str.length());
-            return front + back;
-        }
+    public String notString(String str) {
+        if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
 
 
+        }return str;
+
+
+    }
 }
-
-
