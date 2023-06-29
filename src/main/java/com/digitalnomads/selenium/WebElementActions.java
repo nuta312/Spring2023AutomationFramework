@@ -5,16 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class WebElementActions {
-
+<<<<<<< HEAD
     public static void scrollToElement(WebDriver driver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
-    }
+=======
 
-    public static void clickJS(WebDriver driver, WebElement element) {
+    public static  void scrollToElement(WebDriver driver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", element);
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+
+
+>>>>>>> origin/master
     }
-
-
 }

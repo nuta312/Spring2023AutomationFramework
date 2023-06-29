@@ -2,26 +2,28 @@ package selenium.demo;
 
 import com.digitalnomads.selenium.WebElementActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+
 import org.junit.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-
-
 import java.time.Duration;
 
 
-public class SeleniumIntro {
 
+
+public class SeleniumIntro {
     @Test
     public void textBoxTest() {
 
-        WebDriverManager.chromedriver().setup(); // setup chrome driver
+        WebDriverManager.chromedriver().setup();// setup chrome driver
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize(); // to maximize the window
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15)); // waiting the elements in page
+        driver.manage().window().maximize();// to maximize the window
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://demoqa.com/text-box");
 
         WebElement userName = driver.findElement(By.id("userName"));
@@ -41,16 +43,18 @@ public class SeleniumIntro {
         submitBtn.click();
 
         WebElement resultName = driver.findElement(By.id("name"));
-        Assert.assertEquals(resultName.getText(), "Name:James Bond");
+        Assert.assertTrue(resultName.getText().contains("James Bond"));
 
         WebElement resultEmail = driver.findElement(By.id("email"));
         Assert.assertTrue(resultEmail.getText().contains("james.bond@gmail.com"));
 
-        WebElement resultCurrentAddress = driver.findElement(By.xpath("//p[@id='currentAddress']"));
-        Assert.assertTrue(resultCurrentAddress.getText().contains("Wall Street 221"));
+        WebElement resultcurrentAddress = driver.findElement(By.xpath("//p[@id='currentAddress']"));
+        Assert.assertTrue(resultcurrentAddress.getText().contains("Wall Street 221"));
 
-        WebElement resultPermanentAddress = driver.findElement(By.xpath("//p[@id='permanentAddress']"));
-        Assert.assertTrue(resultPermanentAddress.getText().contains("Trump Tower"));
+        WebElement resultpermanentAddress = driver.findElement(By.xpath("//p[@id='permanentAddress']"));
+        Assert.assertTrue(resultpermanentAddress.getText().contains("Trump Tower"));
+
+
 
     }
 }
