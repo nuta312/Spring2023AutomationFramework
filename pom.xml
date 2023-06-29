@@ -15,7 +15,6 @@
     </properties>
 
 
-
     <dependencies>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -44,7 +43,6 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
-
 
     </dependencies>
 </project>

@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 public class RadioButton extends BaseTest{
 
+
     @Test
     void radioButtonTest(){
         driver.get("https://demoqa.com/radio-button");
