@@ -31,7 +31,7 @@ public class AsanNamba {
 
         WebElement ustaRestaurant = driver.findElement(By.xpath("//a[@href=\"/usta-turkish-restaurant\"]"));
         WebElementActions.scrollToElement(driver, ustaRestaurant);
-        WebElementActions.clickJS(driver, ustaRestaurant);
+//        WebElementActions.clickJS(driver, ustaRestaurant);
 
 
 
