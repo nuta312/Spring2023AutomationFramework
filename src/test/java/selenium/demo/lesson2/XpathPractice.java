@@ -3,8 +3,9 @@ package selenium.demo.lesson2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+import selenium.demo.BaseTest;
 
-public class XpathPractice extends BaseTest{
+public class XpathPractice extends BaseTest {
 
     @Test
     void xpathDemo1(){
