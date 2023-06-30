@@ -1,8 +1,6 @@
 package selenium.demo.nambaFoodHomeWork;
 
 import com.digitalnomads.selenium.WebElementActions;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
