@@ -14,8 +14,6 @@ public class DemoqaRadioButton extends BaseTest {
     @Test
     void checkBoxTest() {
         driver.get(("https://demoqa.com/checkbox"));
-//        WebElement homeButton = driver.findElement(By.xpath("//label[@for='tree-node-home']"));
-//        homeButton.click();
         WebElement homeButton1 = driver.findElement(By.xpath("(//button[@class='rct-collapse rct-collapse-btn'])[1]"));
         homeButton1.click();
         WebElement desktopButton = driver.findElement(By.xpath("(//button[@class='rct-collapse rct-collapse-btn'])[2]"));
