@@ -1,4 +1,4 @@
-package selenium.demo;
+package selenium.demo.nambaFoodHomeWork.manasik;
 
 import com.digitalnomads.selenium.WebElementActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
