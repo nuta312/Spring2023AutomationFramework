@@ -1,17 +1,17 @@
 package selenium.demo.nambaFoodHomeWork.ismailov;
 
-import com.digitalnomads.selenium.WebElementActions;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.Test;
 
-import java.time.Duration;
+
+
 
 public class Demo{
     public static void main(String[] args) throws InterruptedException {
@@ -24,9 +24,10 @@ public class Demo{
             WebElement menuLink = driver.findElement(By.xpath("(//a[@class='menu-link '])[1]"));
             menuLink.click();
 
-            WebElement vseZavedeniyaBtn = driver.findElement(By.xpath("//h1[@class='title']"));
+            WebElement titleText = driver.findElement(By.xpath("//h1[@class='title']"));
             JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-            jsExecutor.executeScript("arguments[0].scrollIntoView(true);", vseZavedeniyaBtn);
+            jsExecutor.executeScript("arguments[0].scrollIntoView(true);", titleText);
+
 
         WebElement fastFootBtn = driver.findElement(By.xpath("(//div[@class='cat-item--title'])[6]"));
         fastFootBtn.click();
