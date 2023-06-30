@@ -21,21 +21,26 @@ public class Demo{
             driver.get("https://nambafood.kg/");
 
 
-            WebElement menuLink = driver.findElement(By.xpath("/html/body/header/section[2]/ul/li[1]/a"));
+            WebElement menuLink = driver.findElement(By.xpath("(//a[@class='menu-link '])[1]"));
             menuLink.click();
 
-            WebElement fastFoodBtn = driver.findElement(By.xpath("/html/body/div[2]/main/section[3]/div/a[6]/div[2]"));
+            WebElement vseZavedeniyaBtn = driver.findElement(By.xpath("//h1[@class='title']"));
             JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-            jsExecutor.executeScript("arguments[0].scrollIntoView(true);", fastFoodBtn);
-            fastFoodBtn.click();
+            jsExecutor.executeScript("arguments[0].scrollIntoView(true);", vseZavedeniyaBtn);
 
-            WebElement mcBurgerBtn = driver.findElement(By.xpath("/html/body/main/section[3]/div[2]/div[3]/a[3]/div[2]/div[1]/div[1]"));
+        WebElement fastFootBtn = driver.findElement(By.xpath("(//div[@class='cat-item--title'])[6]"));
+        fastFootBtn.click();
+
+
+            WebElement mcBurgerBtn = driver.findElement(By.xpath("(//div[@class='cafe--name'])[3]"));
             mcBurgerBtn.click();
 
-            WebElement submitBtn1 = driver.findElement(By.xpath("//*[@id=\"531\"]/div/div[1]/div[2]"));
+            WebElement submitBtn1 = driver.findElement(By.xpath("(//button[@class='status active bay_item'])[6]"));
             submitBtn1.click();
-            WebElement submitBtn2 = driver.findElement(By.xpath("//*[@id=\"285\"]/div/div[1]/div[2]/button"));
+            WebElement submitBtn2 = driver.findElement(By.xpath("(//button[@class='status active bay_item'])[10]"));
             submitBtn2.click();
+            WebElement submitBtn3 = driver.findElement(By.xpath("(//button[@class='status active bay_item'])[12]"));
+            submitBtn3.click();
 
 
             Thread.sleep(3000);
@@ -43,53 +48,54 @@ public class Demo{
 
             WebElement basketBtn = driver.findElement(By.xpath("//a[@class='basket tk-basket']"));
             basketBtn.click();
+            WebElement plusCola = driver.findElement(By.xpath("(//div[@class='count-button count-up'])[3]"));
+            plusCola.click();
 
-            WebElement basketSubmitBtn = driver.findElement(By.xpath("(//button[@type = 'submit'])[5]"));
+            WebElement basketSubmitBtn = driver.findElement(By.xpath("//button[@class='order--btn order--access']"));
             basketSubmitBtn.click();
+        Thread.sleep(5000);
 
-            WebElement fullName = driver.findElement(By.xpath("//input[@id = 'food_order_client_name']"));
-            Actions actions = new Actions(driver);
-            String actualFullName = "Асанов Усон";
-            for (char character : actualFullName.toCharArray()) {
-                actions.moveToElement(fullName).click().sendKeys(String.valueOf(character)).pause(100).perform();
-            }
+            WebElement fullName = driver.findElement(By.xpath("//input[@id='food_order_client_name']"));
+        Actions actions = new Actions(driver);
+        String actualFullName = "Асанов Усон";
+        for (char character : actualFullName.toCharArray()) {
+            actions.moveToElement(fullName).click().sendKeys(String.valueOf(character)).pause(100).perform();
+        }
 
-            WebElement foodOrderAddress = driver.findElement(By.xpath("//input[@id = 'food_order_address']"));
-            String actualAddress = "Гебзе 126";
-            for (char character : actualAddress.toCharArray()) {
-                actions.moveToElement(foodOrderAddress).click().sendKeys(String.valueOf(character)).pause(100).perform();
-            }
 
-            WebElement emptyArea = driver.findElement(By.tagName("body"));
-            emptyArea.click();
+            WebElement foodOrderAddress = driver.findElement(By.xpath("//input[@id='food_order_address']"));
+        String actualAddress = "Гебзе 126";
+        for (char character : actualAddress.toCharArray()) {
+            actions.moveToElement(foodOrderAddress).click().sendKeys(String.valueOf(character)).pause(100).perform();
+        }
 
-            WebElement doorCode = driver.findElement(By.xpath("//input[@id = 'food_order_door_code']"));
-            String doorNumber = "дом  126";
-            for (char character : doorNumber.toCharArray()){
-                actions.moveToElement(doorCode).click().sendKeys(String.valueOf(character)).pause(100).perform();
-            }
 
-            WebElement orderPhone = driver.findElement(By.xpath("//input[@id = 'food_order_phone']"));
-            String phoneNumber = "0333222555";
-            for (char character : phoneNumber.toCharArray()){
-                actions.moveToElement(orderPhone).click().sendKeys(String.valueOf(character)).pause(100).perform();
-            }
+            WebElement doorCode = driver.findElement(By.xpath("//input[@id='food_order_door_code']"));
+        String doorNumber = " дом 3 / квартира 221";
+        for (char character : doorNumber.toCharArray()){
+            actions.moveToElement(doorCode).click().sendKeys(String.valueOf(character)).pause(100).perform();
+        }
 
-            Thread.sleep(2000);
+            WebElement orderPhone = driver.findElement(By.xpath("//input[@id='food_order_phone']"));
+        String phoneNumber = "0112555888";
+        for (char character : phoneNumber.toCharArray()){
+            actions.moveToElement(orderPhone).click().sendKeys(String.valueOf(character)).pause(100).perform();
+        }
 
             WebElement extraInformation = driver.findElement(By.xpath("//textarea[@id='food_order_additional_info']"));
-            String info = "нет";
-            for(char character : info.toCharArray()){
-                actions.moveToElement(extraInformation).click().sendKeys(String.valueOf(character)).pause(100).perform();
-            }
+        String info = "Нет";
+        for(char character : info.toCharArray()){
+            actions.moveToElement(extraInformation).click().sendKeys(String.valueOf(character)).pause(100).perform();
+        }
+
 
             WebElement moneyChange = driver.findElement(By.xpath("//input[@id='food_order_money_change']"));
-            String money = "5000";
-            for(char character : money.toCharArray()){
-                actions.moveToElement(moneyChange).click().sendKeys(String.valueOf(character)).pause(100).perform();
-            }
+        String money = "5000";
+        for(char character : money.toCharArray()){
+            actions.moveToElement(moneyChange).click().sendKeys(String.valueOf(character)).pause(100).perform();
+        }
 
-            WebElement orderBtn = driver.findElement(By.xpath("//button[@id = 'payment_cash']"));
+            WebElement orderBtn = driver.findElement(By.xpath("//button[@id='payment_cash']"));
             orderBtn.click();
 
         }
