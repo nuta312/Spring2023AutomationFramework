@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -29,70 +30,44 @@ public class NambaFood {
         WebElement cuisine = driver.findElement(By.linkText("Национальная кухня"));
         cuisine.click();
 
-        WebElement cafe = driver.findElement(By.linkText("Sun Club"));
+        WebElement cafe = driver.findElement(By.linkText("Фаиза"));
         cafe.click();
 
+        WebElement clickOrder = driver.findElement(By.xpath("//span[@id='305']//div[@class='card--wrap']//div[1]//div[2]//button[1]"));
+        clickOrder.click();
 
-        //WebElement foodBtn = driver.findElement(By.xpath("//div[@class='home--cat-prev']"));
-     //   foodBtn.click();
-
-        WebElement nationalfoodBtn = driver.findElement(By.xpath("//div[@class='cat-item--title']"));
-        nationalfoodBtn.click();
-
-        WebElement chinesCousineBtn = driver.findElement(By.xpath("//a[@class='active']"));
-        chinesCousineBtn.click();
-
-        WebElement lagmanCafeBtn = driver.findElement(By.xpath("(//div[@class='cafe--name'])[2]"));
-        lagmanCafeBtn.click();
-
-        WebElement orderBtn = driver.findElement(By.xpath("(//button[@type='submit'])[7]"));
-        orderBtn.click();
-
-        Thread.sleep(4000);
-
-        WebElement busketBtn = driver.findElement(By.xpath("//div[@class='btn menu-link']"));
+        WebElement busketBtn = driver.findElement(By.xpath("//a[@class='basket tk-basket']//*[name()='svg']"));
         busketBtn.click();
 
-        WebElement orderFinishBtn = driver.findElement(By.xpath("button[@class='order--btn order--access']"));
-        orderFinishBtn.click();
+        WebElement checkout = driver.findElement(By.linkText("Оформить заказ"));
+        checkout.click();
 
-        WebElement userName = driver.findElement(By.xpath(("//input[@type='text'])[6]")));
-        userName.sendKeys("Jan");
+        WebElement userName = driver.findElement(By.xpath("//input[@id='food_order_client_name']"));
+        userName.sendKeys("Tupac Shakur");
 
-        WebElement adress = driver.findElement(By.xpath(("//input[@type='text'])[7]")));
-        adress.sendKeys("Ankara 7");
+       // WebElement Address = driver.findElement(By.xpath("//input[@id='food_order_address']"));
+        //Address.sendKeys("Space 1a");
 
-        WebElement house = driver.findElement(By.xpath(("//input[@type='text'])[8]")));
-        house.sendKeys("12");
+        WebElement floor = driver.findElement(By.xpath("//input[@id='food_order_door_code']"));
+        floor.sendKeys("45");
 
-        WebElement phone = driver.findElement(By.xpath(("//input[@type='text'])[9]")));
-        phone.sendKeys("996704105600");
+        WebElement phone = driver.findElement(By.xpath("//input[@id='food_order_phone']"));
+        phone.sendKeys("0704105600");
 
-        WebElement addInfo = driver.findElement(By.xpath(("//textarea[@id='food_order_additional_info']")));
-        addInfo.sendKeys("Перед заходом с танцуй");
+        WebElement addInformation = driver.findElement(By.xpath("//textarea[@id='food_order_additional_info']"));
+        addInformation.sendKeys("Без танца не возьмем заказ");
 
-        WebElement pay = driver.findElement(By.xpath("//input[@class='recall-number']"));
-        WebElementActions.scrollToElement(driver, pay);
-        pay.sendKeys("630");
+        WebElement cashPay = driver.findElement(By.xpath("//li[normalize-space()='MBank Online']"));
+        cashPay.click();
 
-        WebElement finishOrd = driver.findElement(By.xpath("(//button[@class='order--btn order--access'])[2]"));
-        finishOrd.click();
+        WebElement cashNumber = driver.findElement(By.xpath("//input[@id='payment--kbk-phone']"));
+        cashNumber.sendKeys("0704105600");
 
-       // WebElement result = driver.findElement(By.xpath());
+        WebElement order = driver.findElement(By.xpath("//button[@id='payment_ibank']"));
+        order.click();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@id='result']")).isDisplayed());
 
     }
-}
+
+    }
