@@ -1,4 +1,4 @@
-package selenium.demo.lesson2.Tilek;
+package selenium.demo.nambaFoodHomeWork.tilekNamba.practice;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package selenium.demo.lesson2.Tilek;
+package selenium.demo.nambaFoodHomeWork.tilekNamba.practice;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
