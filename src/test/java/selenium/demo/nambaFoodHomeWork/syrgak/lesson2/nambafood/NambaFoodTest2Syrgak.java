@@ -1,4 +1,4 @@
-package selenium.demo.nambaFoodHomeWork.syrgak.lesson2;
+package selenium.demo.nambaFoodHomeWork.syrgak.lesson2.nambafood;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
