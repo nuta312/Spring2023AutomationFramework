@@ -19,10 +19,10 @@ public abstract class BaseTestHome {
        driver.manage().window().maximize();
    }
 
-//   @AfterClass
-//
-//    public void tearDown(){
-//       driver.close();
-//       driver.quit();
-//   }
+   @AfterClass
+
+    public void tearDown(){
+       driver.close();
+       driver.quit();
+   }
 }
