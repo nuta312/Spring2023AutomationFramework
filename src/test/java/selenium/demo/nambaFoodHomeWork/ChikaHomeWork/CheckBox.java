@@ -1,9 +1,9 @@
 package selenium.demo.nambaFoodHomeWork.ChikaHomeWork;
 
-import lesson2.BaseTest;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import selenium.demo.lesson2.BaseTest;
 
 public class CheckBox extends BaseTest {
     @Test
