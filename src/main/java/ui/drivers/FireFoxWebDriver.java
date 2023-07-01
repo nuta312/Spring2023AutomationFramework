@@ -11,12 +11,13 @@ import java.time.Duration;
 
 public class FireFoxWebDriver {
     public static WebDriver fireFoxWebDriver(){
-        WebDriverManager.firefoxdriver().setup();
-        FirefoxOptions options=new FirefoxOptions();
-        options.addArguments("--disable-extensions");
-        WebDriver driver=new FirefoxDriver(options);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        return driver;
+      WebDriverManager.firefoxdriver().setup();
+      FirefoxOptions options = new FirefoxOptions();
+      options.addArguments("--disable-extensions");
+
+      WebDriver driver = new FirefoxDriver(options);
+      driver.manage().window().maximize();
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+      return driver;
     }
 }
