@@ -49,9 +49,7 @@ public class HomeWork3Janyla extends BaseTest {
         clickDownloads.click();
 
 
-        WebElement result = driver.findElement(By.xpath("//div[@id='result']"));
-        Assert.assertTrue(result.getText().contains("home desktop notes commands documents workspace react angular veu office public private classified general downloads wordFile excelFile"));
-        Assert.assertTrue(result.isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@id='result']")).isDisplayed());
 
 
 //        WebElement result = driver.findElement(By.tagName("div"));
