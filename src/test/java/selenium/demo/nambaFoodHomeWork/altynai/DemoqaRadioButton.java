@@ -42,6 +42,5 @@ public class DemoqaRadioButton extends BaseTest {
         Assert.assertTrue(officeButton.isEnabled());
 
 
-
     }
 }

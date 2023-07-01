@@ -21,9 +21,9 @@ public abstract class BaseTest {
         driver.get("https://demoqa.com/checkbox");
     }
 
-    @AfterClass
-    public void tearDown() {
-        driver.close();
-        driver.quit();
-    }
+//    @AfterClass
+//    public void tearDown() {
+//        driver.close();
+//        driver.quit();
+//    }
 }
