@@ -1,4 +1,4 @@
-package selenium.ui.configuration;
+package com.digitalnomads.selenium.ui.configuration;
 
 import java.io.IOException;
 import java.util.Properties;
