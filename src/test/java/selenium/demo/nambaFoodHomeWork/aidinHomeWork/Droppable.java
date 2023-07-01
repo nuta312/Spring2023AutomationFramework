@@ -22,4 +22,23 @@ public class Droppable extends BaseTest {
         Assert.assertEquals(targetEl.getText(),"Dropped!");
         Thread.sleep(3000);
     }
+    @Test
+    void acceptTest() throws InterruptedException {
+        driver.get("https://demoqa.com/droppable");
+        driver.findElement(By.xpath("//a[@id=\"droppableExample-tab-accept\"]")).click();
+
+        Actions actions = new Actions(driver);
+        WebElement source = driver.findElement(By.id("notAcceptable"));
+        WebElement target = driver.findElement(By.xpath("(//div[@id=\"droppable\"])[2]"));
+        actions.dragAndDrop(source, target).perform();
+        Assert.assertEquals(target.getText(), "Drop here");
+        //перетаскиваем не действующий элемент ^^^
+
+        WebElement sourceTrue = driver.findElement(By.id("acceptable"));
+        actions.dragAndDrop(sourceTrue,target).perform();
+        Assert.assertEquals(target.getText(), "Dropped!");
+        //перетаскиваем действующий элемент ^^^
+
+        Thread.sleep(3000);
+    }
 }
