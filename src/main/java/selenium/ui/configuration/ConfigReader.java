@@ -1,4 +1,4 @@
-package ui.config;
+package selenium.ui.configuration;
 
 import java.util.Properties;
 

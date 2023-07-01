@@ -1,4 +1,4 @@
-package ui.drivers;
+package selenium.ui.drivers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import java.time.Duration;
 
 public class FireFoxWebDriver {
-    public static WebDriver fireFoxWebDriver(){
+    public static WebDriver loadFireFoxWebDriver(){
       WebDriverManager.firefoxdriver().setup();
       FirefoxOptions options = new FirefoxOptions();
       options.addArguments("--disable-extensions");
