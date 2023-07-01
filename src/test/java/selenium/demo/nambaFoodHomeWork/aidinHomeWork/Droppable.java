@@ -19,6 +19,7 @@ public class Droppable extends BaseTest {
         actions.dragAndDrop(sourceEl,targetEl).perform();
         Point locationAfter = sourceEl.getLocation();
         Assert.assertNotEquals(locationBefore,locationAfter);
+        Assert.assertEquals(targetEl.getText(),"Dropped!");
         Thread.sleep(3000);
     }
 }
