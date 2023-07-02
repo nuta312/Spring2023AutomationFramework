@@ -1,6 +1,6 @@
 package selenium.demo.nambaFoodHomeWork.altynai;
 
-import com.digitalnomads.selenium.WebElementActions;
+import com.digitalnomads.WebElementActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
