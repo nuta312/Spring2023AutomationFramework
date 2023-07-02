@@ -1,4 +1,4 @@
-package selenium.demo.homework;
+package selenium.demo.homework2;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

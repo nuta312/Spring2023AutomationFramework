@@ -1,6 +1,6 @@
 package selenium.demo.nambaFoodHomeWork.aidinHomeWork;
 
-import com.digitalnomads.selenium.WebElementActions;
+import com.digitalnomads.WebElementActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -33,7 +33,7 @@ public class SeleniumHomeWorkNumba {
         faiza.click();
 
         WebElementActions.scrollToElement(driver, driver.findElement(By.xpath("//a[@class=\"filter--item tag-38244\"]")));
-        WebElement shorpo = driver.findElement(By.xpath("//div[@data-item-name=\"Шорпо\"]//button[@type=\"submit\"]"));
+        WebElement shorpo = driver.findElement(By.xpath("(//button[@class=\"status active bay_item\"])[1]"));
         shorpo.click();
 
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
