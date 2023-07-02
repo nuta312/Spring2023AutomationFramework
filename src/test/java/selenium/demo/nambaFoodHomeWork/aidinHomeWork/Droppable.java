@@ -85,7 +85,6 @@ public class Droppable extends BaseTest {
         Actions actions = new Actions(driver);
         WebElement source = driver.findElement(By.id("dragBox"));
         WebElement target3 = driver.findElement(By.id("greedyDropBox"));
-        WebElement target4 = driver.findElement(By.id("greedyDropBoxInner"));
 
         actions.dragAndDropBy(source,300,500).perform();
 
@@ -103,7 +102,6 @@ public class Droppable extends BaseTest {
         Actions actions = new Actions(driver);
         WebElement source = driver.findElement(By.id("dragBox"));
         WebElement target3 = driver.findElement(By.id("greedyDropBox"));
-        WebElement target4 = driver.findElement(By.id("greedyDropBoxInner"));
 
         actions.dragAndDropBy(source,300,400).perform();
         System.out.println(target3.getText());
