@@ -11,8 +11,6 @@ public class DemoqaRadioButton extends BaseTest {
     @Test
     void checkBoxTest() {
         driver.get(("https://demoqa.com/checkbox"));
-//        WebElement homeButton = driver.findElement(By.xpath("//label[@for='tree-node-home']"));
-//        homeButton.click();
         WebElement homeButton1 = driver.findElement(By.xpath("(//button[@class='rct-collapse rct-collapse-btn'])[1]"));
         homeButton1.click();
         WebElement desktopButton = driver.findElement(By.xpath("(//button[@class='rct-collapse rct-collapse-btn'])[2]"));
@@ -41,7 +39,7 @@ public class DemoqaRadioButton extends BaseTest {
         Assert.assertTrue(resultСheckMarkButtonClassified.getText().contains("classified"));
         WebElement resultСheckMarkButtonGeneral= driver.findElement(By.xpath("//span[text()='general']"));
         Assert.assertTrue(resultСheckMarkButtonGeneral.getText().contains("general"));
-
+        Assert.assertTrue(officeButton.isEnabled());
 
 
     }
