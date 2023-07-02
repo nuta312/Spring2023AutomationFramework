@@ -12,6 +12,7 @@ public abstract class BaseTest {
 
     public WebDriver driver;
 
+
     @BeforeClass
     public void setUpBrowser(){
         driver = new ChromeDriver();
