@@ -42,7 +42,24 @@ public class Droppable extends BaseTest {
         Thread.sleep(3000);
     }
     @Test
-    void PreventPropogation() throws InterruptedException {
+    void PreventPropogation1() throws InterruptedException {
+        driver.navigate().to("https://demoqa.com/droppable");
+        driver.findElement(By.id("droppableExample-tab-preventPropogation")).click();
+
+        Actions actions = new Actions(driver);
+        WebElement source = driver.findElement(By.id("dragBox"));
+        WebElement target1 = driver.findElement(By.id("notGreedyDropBox"));
+        WebElement target3 = driver.findElement(By.id("greedyDropBox"));
+
+        actions.dragAndDropBy(source,300,0).perform();
+        System.out.println(target1.getText());
+
+        Assert.assertTrue(target1.getText().equals("Dropped!\n" +
+                "Inner droppable (not greedy)"));
+        Thread.sleep(3000);
+    }
+    @Test
+    void PreventPropogation2() throws InterruptedException {
         driver.navigate().to("https://demoqa.com/droppable");
         driver.findElement(By.id("droppableExample-tab-preventPropogation")).click();
 
@@ -50,14 +67,14 @@ public class Droppable extends BaseTest {
         WebElement source = driver.findElement(By.id("dragBox"));
         WebElement target1 = driver.findElement(By.id("notGreedyDropBox"));
         WebElement target2 = driver.findElement(By.id("notGreedyInnerDropBox"));
-        WebElement target3 = driver.findElement(By.id("greedyDropBox"));
-        WebElement target4 = driver.findElement(By.id("greedyDropBoxInner"));
 
-        actions.dragAndDrop(source,target1).perform();
+        actions.moveToElement(source).clickAndHold().moveToElement(target2).release().perform();
+
         System.out.println(target1.getText());
-
-//        Assert.assertTrue(target1.getText().equals("Dropped!"));
-//        Assert.assertEquals(target2, "Inner droppable (not greedy)");
         Thread.sleep(3000);
+
+        Assert.assertEquals(target1.getText(),"Dropped!\n" +
+                "Dropped!");
     }
+
 }
