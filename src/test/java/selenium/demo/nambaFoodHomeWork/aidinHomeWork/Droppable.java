@@ -20,7 +20,6 @@ public class Droppable extends BaseTest {
         Point locationAfter = sourceEl.getLocation();
         Assert.assertNotEquals(locationBefore,locationAfter);
         Assert.assertEquals(targetEl.getText(),"Dropped!");
-        Thread.sleep(3000);
     }
     @Test(priority = 1)
     void acceptTest() throws InterruptedException {
@@ -38,8 +37,6 @@ public class Droppable extends BaseTest {
         actions.dragAndDrop(sourceTrue,target).perform();
         Assert.assertEquals(target.getText(), "Dropped!");
         //перетаскиваем действующий элемент ^^^
-
-        Thread.sleep(3000);
     }
     @Test(priority = 2)
     void PreventPropogation1() throws InterruptedException {
@@ -56,7 +53,6 @@ public class Droppable extends BaseTest {
 
         Assert.assertTrue(target1.getText().equals("Dropped!\n" +
                 "Inner droppable (not greedy)"));
-        Thread.sleep(3000);
     }
     @Test(priority = 3)
     void PreventPropogation2() throws InterruptedException {
@@ -71,7 +67,6 @@ public class Droppable extends BaseTest {
         actions.moveToElement(source).clickAndHold().moveToElement(target2).release().perform();
 
         System.out.println(target1.getText());
-        Thread.sleep(3000);
 
         Assert.assertEquals(target1.getText(),"Dropped!\n" +
                 "Dropped!");
@@ -91,7 +86,6 @@ public class Droppable extends BaseTest {
         System.out.println(target3.getText());
         Assert.assertEquals(target3.getText(),"Dropped!\n" +
                 "Inner droppable (greedy)");
-        Thread.sleep(3000);
     }
 
     @Test(priority = 5)
@@ -105,7 +99,6 @@ public class Droppable extends BaseTest {
 
         actions.dragAndDropBy(source,300,400).perform();
         System.out.println(target3.getText());
-        Thread.sleep(3000);
         Assert.assertEquals(target3.getText(),"Outer droppable\n" +
                 "Dropped!");
     }
