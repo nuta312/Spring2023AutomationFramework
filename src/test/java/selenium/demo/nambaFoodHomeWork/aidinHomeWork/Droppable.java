@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import selenium.demo.lesson2.BaseTest;
 
 public class Droppable extends BaseTest {
-    @Test
+    @Test(priority = 0)
     void simpleTest() throws InterruptedException {
         driver.get("https://demoqa.com/droppable");
         Actions actions = new Actions(driver);
@@ -22,7 +22,7 @@ public class Droppable extends BaseTest {
         Assert.assertEquals(targetEl.getText(),"Dropped!");
         Thread.sleep(3000);
     }
-    @Test
+    @Test(priority = 1)
     void acceptTest() throws InterruptedException {
         driver.get("https://demoqa.com/droppable");
         driver.findElement(By.xpath("//a[@id=\"droppableExample-tab-accept\"]")).click();
@@ -41,7 +41,7 @@ public class Droppable extends BaseTest {
 
         Thread.sleep(3000);
     }
-    @Test
+    @Test(priority = 2)
     void PreventPropogation1() throws InterruptedException {
         driver.navigate().to("https://demoqa.com/droppable");
         driver.findElement(By.id("droppableExample-tab-preventPropogation")).click();
@@ -58,7 +58,7 @@ public class Droppable extends BaseTest {
                 "Inner droppable (not greedy)"));
         Thread.sleep(3000);
     }
-    @Test
+    @Test(priority = 3)
     void PreventPropogation2() throws InterruptedException {
         driver.navigate().to("https://demoqa.com/droppable");
         driver.findElement(By.id("droppableExample-tab-preventPropogation")).click();
@@ -77,7 +77,7 @@ public class Droppable extends BaseTest {
                 "Dropped!");
     }
 
-    @Test
+    @Test(priority = 4)
     void PreventPropogation3() throws InterruptedException {
         driver.navigate().to("https://demoqa.com/droppable");
         driver.findElement(By.id("droppableExample-tab-preventPropogation")).click();
@@ -95,7 +95,7 @@ public class Droppable extends BaseTest {
         Thread.sleep(3000);
     }
 
-    @Test
+    @Test(priority = 5)
     void PreventPropogation4() throws InterruptedException {
         driver.navigate().to("https://demoqa.com/droppable");
         driver.findElement(By.id("droppableExample-tab-preventPropogation")).click();
@@ -112,4 +112,4 @@ public class Droppable extends BaseTest {
                 "Dropped!");
     }
 
-    }
+}
