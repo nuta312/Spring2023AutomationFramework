@@ -49,7 +49,7 @@ public class Droppable extends BaseTest {
         Actions actions = new Actions(driver);
         WebElement source = driver.findElement(By.id("dragBox"));
         WebElement target1 = driver.findElement(By.id("notGreedyDropBox"));
-        WebElement target3 = driver.findElement(By.id("greedyDropBox"));
+
 
         actions.dragAndDropBy(source,300,0).perform();
         System.out.println(target1.getText());
@@ -77,4 +77,39 @@ public class Droppable extends BaseTest {
                 "Dropped!");
     }
 
-}
+    @Test
+    void PreventPropogation3() throws InterruptedException {
+        driver.navigate().to("https://demoqa.com/droppable");
+        driver.findElement(By.id("droppableExample-tab-preventPropogation")).click();
+
+        Actions actions = new Actions(driver);
+        WebElement source = driver.findElement(By.id("dragBox"));
+        WebElement target3 = driver.findElement(By.id("greedyDropBox"));
+        WebElement target4 = driver.findElement(By.id("greedyDropBoxInner"));
+
+        actions.dragAndDropBy(source,300,500).perform();
+
+        System.out.println(target3.getText());
+        Assert.assertEquals(target3.getText(),"Dropped!\n" +
+                "Inner droppable (greedy)");
+        Thread.sleep(3000);
+    }
+
+    @Test
+    void PreventPropogation4() throws InterruptedException {
+        driver.navigate().to("https://demoqa.com/droppable");
+        driver.findElement(By.id("droppableExample-tab-preventPropogation")).click();
+
+        Actions actions = new Actions(driver);
+        WebElement source = driver.findElement(By.id("dragBox"));
+        WebElement target3 = driver.findElement(By.id("greedyDropBox"));
+        WebElement target4 = driver.findElement(By.id("greedyDropBoxInner"));
+
+        actions.dragAndDropBy(source,300,400).perform();
+        System.out.println(target3.getText());
+        Thread.sleep(3000);
+        Assert.assertEquals(target3.getText(),"Outer droppable\n" +
+                "Dropped!");
+    }
+
+    }
