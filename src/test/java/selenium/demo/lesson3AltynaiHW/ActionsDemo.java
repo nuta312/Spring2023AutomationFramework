@@ -1,4 +1,4 @@
-package selenium.demo.lesson3;
+package selenium.demo.lesson3AltynaiHW;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

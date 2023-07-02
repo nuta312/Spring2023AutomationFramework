@@ -1,11 +1,8 @@
-package selenium.demo.lesson3;
+package selenium.demo.lesson3AltynaiHW;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import selenium.demo.lesson2.BaseTest;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 public class WebDriverMethods extends BaseTest {
     @Test
