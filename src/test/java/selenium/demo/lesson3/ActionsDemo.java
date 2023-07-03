@@ -10,22 +10,35 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class ActionsDemo extends BaseTest {
 
+
     @Test
-    void demo1() throws InterruptedException {
-        driver.get("https://demoqa.com/buttons");
-        WebElement doubleClick = driver.findElement(By.id("doubleClickBtn"));
+    void demo3() throws InterruptedException {
+        driver.navigate().to("https://demoqa.com/buttons");
+        WebElement doubleClick = driver.findElement(By.cssSelector("button#doubleClickBtn"));
         Actions actions = new Actions(driver);
         actions.doubleClick(doubleClick).perform();
-        assertTrue(driver.findElement(By.id("doubleClickMessage")).isDisplayed());
+        Thread.sleep(4000);
+        assertTrue(driver.findElement(By.cssSelector("p#doubleClickMessage")).isDisplayed());
 
-        WebElement rightClick = driver.findElement(By.id("rightClickBtn"));
-        actions.contextClick(rightClick).perform(); // right click
-        Thread.sleep(5000);
-
-        WebElement clickMe = driver.findElement(By.xpath("//button[text()='Click Me']"));
-        actions.click(clickMe).perform();
-        Thread.sleep(5000);
+        WebElement rightclick = driver.findElement(By.cssSelector("button#rightClickBtn"));
+        actions.contextClick(rightclick).perform();
+        Thread.sleep(3000);
+        WebElement clickme = driver.findElement(By.xpath("//button[text()='Click Me']"));
+        actions.click(clickme).perform();
+        Thread.sleep(3000);
     }
+
+    @Test
+    void demo4() throws InterruptedException {
+        driver.navigate().to("https://www.imoving.com/full-inventory/#!/");
+        Actions actions = new Actions(driver);
+        WebElement furnecht = driver.findElement(By.xpath("//button[text()='Continue']"));
+        actions.moveToElement(furnecht).pause(4000).perform();
+        Thread.sleep(3000);
+        actions.clickAndHold();
+
+    }
+
 }
 
 
