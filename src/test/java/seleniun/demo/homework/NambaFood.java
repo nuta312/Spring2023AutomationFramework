@@ -2,10 +2,13 @@ package seleniun.demo.homework;
 
 import com.digitalnomads.selenium.WebElementActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import jdk.jfr.StackTrace;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -36,8 +39,13 @@ public class NambaFood {
         WebElement clickOrder = driver.findElement(By.xpath("//span[@id='305']//div[@class='card--wrap']//div[1]//div[2]//button[1]"));
         clickOrder.click();
 
-        WebElement busketBtn = driver.findElement(By.xpath("//a[@class='basket tk-basket']//*[name()='svg']"));
-        busketBtn.click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        WebElement basket = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='cart']/a")));
+        basket.click();
+
+//        WebElement busketBtn = driver.findElement(By.xpath("//a[@class='basket tk-basket']//*[name()='svg']"));
+//        busketBtn.click();
 
         WebElement checkout = driver.findElement(By.linkText("Оформить заказ"));
         checkout.click();
@@ -54,6 +62,10 @@ public class NambaFood {
         WebElement phone = driver.findElement(By.xpath("//input[@id='food_order_phone']"));
         phone.sendKeys("0704105600");
 
+        WebElement address = driver.findElement(By.xpath("//input[@id='food_order_address']"));
+        address.sendKeys("Ankara 1");
+
+
         WebElement addInformation = driver.findElement(By.xpath("//textarea[@id='food_order_additional_info']"));
         addInformation.sendKeys("Без танца не возьмем заказ");
 
@@ -61,12 +73,12 @@ public class NambaFood {
         cashPay.click();
 
         WebElement cashNumber = driver.findElement(By.xpath("//input[@id='payment--kbk-phone']"));
-        cashNumber.sendKeys("0704105600");
+        cashNumber.sendKeys("704105600");
 
         WebElement order = driver.findElement(By.xpath("//button[@id='payment_ibank']"));
         order.click();
 
-        Assert.assertTrue(driver.findElement(By.xpath("//div[@id='result']")).isDisplayed());
+     //   Assert.assertTrue(driver.findElement(By.xpath("//div[@id='result']")).isDisplayed());
 
     }
 

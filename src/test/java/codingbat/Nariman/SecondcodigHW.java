@@ -1,4 +1,3 @@
-
 package codingbat.Nariman;
 
 public class SecondcodigHW {
@@ -18,28 +17,23 @@ public class SecondcodigHW {
         return ((Math.abs(100 - n) <= 10) ||
                 (Math.abs(200 - n) <= 10));
     }
-<<<<<<< HEAD
+
+
 
     public boolean posNeg(int a, int b, boolean negative) {
-=======
-
-    public boolean posNeg(int a, int b, boolean negative) {
-
->>>>>>> origin/master
         if (negative) {
             return (a < 0 && b < 0);
         } else {
             return ((a < 0 && b > 0) || (a > 0 && b < 0));
-<<<<<<< HEAD
         }
-    }
-
-        public String notString (String str){
-            if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
-                return str;
-            } else {
-                return "not " + str;
-            }
+//
+//        public String notString(String str){
+//            if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
+//                return str;
+//            }
+//            return "not " + str;
+//
+//            }
         }
 
         public String missingChar (String str,int n){
@@ -48,21 +42,7 @@ public class SecondcodigHW {
             return front + back;
         }
 
-=======
-        }
-
->>>>>>> origin/master
     }
 
-    public String notString(String str) {
-        if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
 
 
-<<<<<<< HEAD
-=======
-        }return str;
-
-
-    }
-}
->>>>>>> origin/master
