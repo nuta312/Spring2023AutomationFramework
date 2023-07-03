@@ -18,9 +18,9 @@ public abstract class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15)); //waiting elements in page
     }
 
-    @AfterClass
-    public void tearDown(){
-        driver.close();
-        driver.quit();
-    }
+//    @AfterClass
+//    public void tearDown(){
+//        driver.close();
+//        driver.quit();
+//    }
 }
