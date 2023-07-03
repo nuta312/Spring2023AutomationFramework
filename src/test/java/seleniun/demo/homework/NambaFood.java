@@ -1,6 +1,6 @@
 package seleniun.demo.homework;
 
-import com.digitalnomads.selenium.WebElementActions;
+import com.digitalnomads.WebElementActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import jdk.jfr.StackTrace;
 import org.openqa.selenium.By;
