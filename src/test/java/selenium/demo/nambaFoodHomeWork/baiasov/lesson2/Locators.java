@@ -2,15 +2,10 @@ package selenium.demo.nambaFoodHomeWork.baiasov.lesson2;
 
 
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
-
-
-import java.time.Duration;
+import selenium.demo.nambaFoodHomeWork.baiasov.lesson3.BaseTest;
 
 public class Locators extends BaseTest {
     @Test

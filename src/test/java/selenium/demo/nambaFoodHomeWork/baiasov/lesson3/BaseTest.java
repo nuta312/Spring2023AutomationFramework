@@ -1,4 +1,4 @@
-package selenium.demo.nambaFoodHomeWork.baiasov.lesson2;
+package selenium.demo.nambaFoodHomeWork.baiasov.lesson3;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

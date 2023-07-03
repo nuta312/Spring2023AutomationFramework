@@ -1,2 +1,4 @@
-package selenium.ui.drivers;public class FireFoxWebDriver {
+package com.digitalnomads.selenium.ui.drivers;
+
+public class FireFoxWebDriver {
 }

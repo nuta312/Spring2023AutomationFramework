@@ -1,14 +1,8 @@
 package selenium.demo.nambaFoodHomeWork.baiasov.checkbox_HW;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-import org.openqa.selenium.By;
-import org.testng.annotations.Test;
-
 import org.testng.annotations.Test;
 
 public class CheckBox extends Abstract {
@@ -31,6 +25,12 @@ public class CheckBox extends Abstract {
         desktopName.equals("Desktop");
         WebElement resdesktopName = driver.findElement(By.xpath("//*[@id=\"tree-node\"]/ol/li/ol/li[1]/span/label/span[3]"));
         Assert.assertEquals(resdesktopName.getText(), "Desktop");
+
+        WebElement documentsBtn = driver.findElement(By.xpath("//*[@id=\"tree-node\"]/ol/li/ol/li[2]/span/button"));
+        documentsBtn.click();
+
+        WebElement dowlaodsBtn = driver.findElement(By.xpath("//*[@id=\"tree-node\"]/ol/li/ol/li[3]/span/button"));
+        dowlaodsBtn.click();
 
 
     }

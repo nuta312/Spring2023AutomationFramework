@@ -1,14 +1,10 @@
 package selenium.demo.nambaFoodHomeWork.baiasov.lesson2;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
-import org.openqa.selenium.By;
-import org.testng.annotations.Test;
+import selenium.demo.nambaFoodHomeWork.baiasov.lesson3.BaseTest;
 
-public class XpathPractice extends BaseTest{
+public class XpathPractice extends BaseTest {
 
     @Test
     void xpathDemo1(){
