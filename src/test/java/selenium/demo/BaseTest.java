@@ -14,17 +14,19 @@ public abstract class BaseTest {
 
 
     @BeforeClass
-    public void setUpBrowser(){
+    public void setUpBrowser() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
 
     }
+
     @AfterClass
-    public void tearDown(){
+    public void tearDown() {
         driver.close();
         driver.quit();
     }
-
-
 }
+
+
+
