@@ -2,6 +2,7 @@ package selenium.demo.nambaFoodHomeWork.tilekNamba;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -46,7 +47,5 @@ public class DemoqaTest extends BaseTestbyTilek {
         WebElement excelFile = driver.findElement(By.xpath("//span[text()='Excel File.doc']"));
         Assert.assertTrue(wordFile.isDisplayed());
         Assert.assertTrue(excelFile.isDisplayed());
-
-
     }
 }
