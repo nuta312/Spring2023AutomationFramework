@@ -15,13 +15,12 @@ public class WebElementMethods extends BaseTest {
     @Test
     void demo() throws InterruptedException {
         driver.get("https://demoqa.com/text-box");
-        WebElement fullName = driver.findElement(By.id("userName"));
+        WebElement fullName = driver.findElement(By.cssSelector("input#userName"));
         fullName.sendKeys("John Wick");
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         fullName.clear();
-        Thread.sleep(5000);
-        fullName.sendKeys("John Wick");
-        System.err.println(fullName.getAttribute("value"));
+        Thread.sleep(3000);
+        fullName.sendKeys("Chika");
+        System.out.println(fullName.getAttribute("value"));
     }
-
 }

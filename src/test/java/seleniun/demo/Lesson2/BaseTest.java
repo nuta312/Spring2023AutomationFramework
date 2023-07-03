@@ -1,19 +1,17 @@
-package selenium.demo.lesson2;
+package seleniun.demo.Lesson2;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 
 import java.time.Duration;
 
 public abstract class BaseTest {
-    public WebDriver driver;
-
+     public  WebDriver driver;
     @BeforeClass
-    public void setUpBrowser() {
+    public void  setUpBrowse(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -21,10 +19,10 @@ public abstract class BaseTest {
     }
 
     @AfterClass
-    public void tearDown() {
+    public void  tearDown(){
         driver.close();
         driver.quit();
+
+
     }
 }
-
-
