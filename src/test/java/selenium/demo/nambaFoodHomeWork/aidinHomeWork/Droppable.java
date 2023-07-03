@@ -102,5 +102,29 @@ public class Droppable extends BaseTest {
         Assert.assertEquals(target3.getText(),"Outer droppable\n" +
                 "Dropped!");
     }
+    @Test(priority = 6)
+    void RevertDraggable() throws InterruptedException {
+        driver.navigate().to("https://demoqa.com/droppable");
+        driver.findElement(By.xpath("//a[@id=\"droppableExample-tab-revertable\"]")).click();
+        Actions actions = new Actions(driver);
+        WebElement wilRev = driver.findElement(By.xpath("//div[@id=\"revertable\"]"));
+        WebElement target = driver.findElement(By.xpath("(//div[@id=\"droppable\"])[3]"));
 
+        Point before = wilRev.getLocation();
+        actions.moveToElement(wilRev).clickAndHold().moveToElement(target).release().perform();
+        Point after = wilRev.getLocation();
+
+        Assert.assertEquals(target.getText(),"Dropped!");
+//        Assert.assertEquals(before,after);
+
+        Thread.sleep(3000);
+        driver.navigate().refresh();
+        driver.findElement(By.xpath("//a[@id=\"droppableExample-tab-revertable\"]")).click();
+
+        WebElement notRev = driver.findElement(By.xpath("//div[@id=\"notRevertable\"]"));
+        WebElement target1 = driver.findElement(By.xpath("(//div[@id=\"droppable\"])[3]"));
+        actions.dragAndDrop(notRev,target1).perform();
+        Assert.assertEquals(target1.getText(),"Dropped!");
+        Thread.sleep(3000);
+    }
 }
