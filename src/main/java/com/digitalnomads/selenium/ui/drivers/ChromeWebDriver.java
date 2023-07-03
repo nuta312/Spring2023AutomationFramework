@@ -1,29 +1,23 @@
 package com.digitalnomads.selenium.ui.drivers;
 
-<<<<<<< HEAD
-public class FireFoxWebDriver {
-=======
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.time.Duration;
 
-public class FireFoxWebDriver {
+public class ChromeWebDriver {
 
-    public static WebDriver loadFirefoxWebDriver() {
-        WebDriverManager.firefoxdriver().setup();
-        FirefoxOptions options = new FirefoxOptions();
+    public static WebDriver loadChromeDriver() {
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-extensions");
 
-        WebDriver driver = new FirefoxDriver(options);
+        WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
         return driver;
     }
->>>>>>> refs/remotes/origin/Lesson3
 }
