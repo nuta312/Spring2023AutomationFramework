@@ -1,4 +1,4 @@
-package seleniun.demo.nambafd;
+package seleniun.demo.homework.nambafd;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

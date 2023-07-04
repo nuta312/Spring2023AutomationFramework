@@ -1,5 +1,6 @@
 package seleniun.demo.Lesson2;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 import java.time.Duration;
 
 public abstract class BaseTest {
+
      public  WebDriver driver;
     @BeforeClass
     public void  setUpBrowse(){
@@ -18,11 +20,11 @@ public abstract class BaseTest {
         driver.manage().window().maximize();
     }
 
-    @AfterClass
-    public void  tearDown(){
-        driver.close();
-        driver.quit();
+//    @AfterClass
+//    public void  tearDown(){
+//        driver.close();
+//        driver.quit();
 
 
     }
-}
+//}

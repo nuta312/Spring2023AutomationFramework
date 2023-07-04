@@ -1,6 +1,6 @@
 package selenium.demo.nambaFoodHomeWork.altynai;
 
-import com.digitalnomads.WebElementActions;
+import com.digitalnomads.selenium.WebElementActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;

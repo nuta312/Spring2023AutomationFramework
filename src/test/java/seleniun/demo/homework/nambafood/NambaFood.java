@@ -1,6 +1,4 @@
-package seleniun.demo.homework;
-
-import com.digitalnomads.selenium.WebElementActions;
+package seleniun.demo.homework.nambafood;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import jdk.jfr.StackTrace;
 import org.openqa.selenium.By;

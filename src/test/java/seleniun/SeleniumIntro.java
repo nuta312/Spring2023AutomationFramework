@@ -1,4 +1,4 @@
-package seleniun.demo;
+package seleniun;
 
 import com.digitalnomads.selenium.WebElementActions;
 import io.github.bonigarcia.wdm.WebDriverManager;

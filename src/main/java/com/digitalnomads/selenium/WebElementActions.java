@@ -1,4 +1,4 @@
-package com.digitalnomads;
+package com.digitalnomads.selenium;
 
 
 import org.openqa.selenium.JavascriptExecutor;
