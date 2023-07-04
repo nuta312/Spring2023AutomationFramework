@@ -1,10 +1,10 @@
-package selenium.demo.nambaFoodHomeWork.tilekNamba;
+package selenium.demo.nambaFoodHomeWork.tilek.HomeWorks;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import selenium.demo.nambaFoodHomeWork.tilekNamba.practice.BaseTestbyTilek;
+import selenium.demo.nambaFoodHomeWork.tilek.practice.BaseTestbyTilek;
 
 public class NambaSecondHomeWork extends BaseTestbyTilek {
 

@@ -1,4 +1,4 @@
-package selenium.demo.nambaFoodHomeWork.tilekNamba.practice;
+package selenium.demo.nambaFoodHomeWork.tilek.practice;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -21,10 +21,10 @@ public abstract class BaseTestbyTilek {
 
     }
 
-    @AfterClass
-    public void tearDown(){
-        driver.close();
-        driver.quit();
-    }
+//    @AfterClass
+//    public void tearDown(){
+//        driver.close();
+//        driver.quit();
+//    }
 
 }
