@@ -1,4 +1,4 @@
-package selenium.demo.homework2;
+package selenium.demo.HW2;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -90,13 +90,13 @@ public class CheckButton extends BaseTestHome {
 //        WebElement generalBtn = driver.findElement(By.xpath("//span[text()='General']"));
 //        Assert.assertTrue(generalBtn.isDisplayed());
 
-        WebElement downloadsBtnResult = driver.findElement(By.xpath("(//*[@stroke='currentColor'])[75]"));
+        WebElement downloadsBtnResult = driver.findElement(By.xpath("(//*[@stroke='currentColor'])[73]"));
         downloadsBtnResult.click();
 
-        WebElement wordFile = driver.findElement(By.xpath("//span[text()='Word File.doc']"));
+        WebElement wordFile = driver.findElement(By.xpath("(//span[@class='rct-title'])[5]"));
         Assert.assertTrue(wordFile.isDisplayed());
 
-        WebElement excelFile = driver.findElement(By.xpath("//span[text()='Excel File.doc']"));
+        WebElement excelFile = driver.findElement(By.xpath("(//span[@class='rct-title'])[6]"));
         Assert.assertTrue(excelFile.isDisplayed());
 
     }

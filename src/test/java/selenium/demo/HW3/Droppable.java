@@ -5,15 +5,9 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import selenium.demo.BaseTest;
-
 import java.time.Duration;
-import java.time.Instant;
-
 import static org.testng.AssertJUnit.*;
 
 public class Droppable extends BaseTest {
@@ -47,17 +41,21 @@ public class Droppable extends BaseTest {
         WebElement dropped = driver.findElement(By.xpath("//div[@id='greedyDropBox']"));
         actions.clickAndHold(dragBox).pause(Duration.ofSeconds(2)).moveToElement(dropped).pause(Duration.ofSeconds(2)).release().build().perform();
 
-//        WebElement revertDraggableBtn =driver.findElement(By.id("droppableExample-tab-revertable"));
-//        revertDraggableBtn.click();
-//        Thread.sleep(5000);
-//
-//        WebElement willRevert = driver.findElement(By.xpath("//div[@id='revertable']"));
-//        WebElement dropItHere= driver.findElement(By.xpath("(//div[@id='droppable'])[3]"));
-//        WebElement revertHere= driver.findElement(By.xpath("(//div[@class='drag-box mt-4 ui-draggable ui-draggable-handle'])[5]"));
-
-
 
         }
+
+    @Test
+    void revertTest() throws InterruptedException {
+        driver.get("https://demoqa.com/droppable");
+        Actions actions = new Actions(driver);
+        driver.findElement(By.xpath("//a[@id='droppableExample-tab-revertable']")).click();
+        WebElement dropme = driver.findElement(By.cssSelector("div#revertable"));
+        WebElement droped = driver.findElement(By.xpath("(//div[@id='droppable'])[3]"));
+        actions.clickAndHold(dropme)
+                .moveToElement(droped).release().perform();
+        Thread.sleep(5000);
+    }
+
     @Test
     void resizableActionsTest() throws InterruptedException {
         driver.get("https://demoqa.com/resizable");
@@ -66,14 +64,14 @@ public class Droppable extends BaseTest {
         Thread.sleep(5000);
 
         WebElement resizeBtn = driver.findElement(By.xpath("//span[@class='react-resizable-handle react-resizable-handle-se']"));
-        Dimension expectedSize= new Dimension(500,300);
+        Dimension expectedSize = new Dimension(500, 300);
 
         Actions action = new Actions(driver);
-        action.moveToElement(resizeBtn).clickAndHold(resizeBtn).moveByOffset(500,300).perform();
+        action.moveToElement(resizeBtn).clickAndHold(resizeBtn).moveByOffset(500, 300).perform();
         Thread.sleep(5000);
 
-        WebElement resultSize=driver.findElement(By.xpath("//div[@id='resizableBoxWithRestriction']"));
-        assertEquals(resultSize.getSize(),expectedSize);
+        WebElement resultSize = driver.findElement(By.xpath("//div[@id='resizableBoxWithRestriction']"));
+        assertEquals(resultSize.getSize(), expectedSize);
 
 
     }

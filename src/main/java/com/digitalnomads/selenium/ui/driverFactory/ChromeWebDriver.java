@@ -1,4 +1,4 @@
-package com.digitalnomads.selenium.ui.drivers;
+package com.digitalnomads.selenium.ui.driverFactory;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

@@ -1,7 +1,6 @@
-package com.digitalnomads.selenium.ui.drivers;
+package com.digitalnomads.selenium.ui.driverFactory;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.webdriver.WebDriverBrowser;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
