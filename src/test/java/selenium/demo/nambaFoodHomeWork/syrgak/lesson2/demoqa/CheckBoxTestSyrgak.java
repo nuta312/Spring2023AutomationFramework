@@ -1,12 +1,13 @@
 package selenium.demo.nambaFoodHomeWork.syrgak.lesson2.demoqa;
 
-import org.junit.Assert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import selenium.demo.lesson2.BaseTest;
+
 
 public class CheckBoxTestSyrgak extends BaseTest {
     @Test
