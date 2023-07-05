@@ -17,6 +17,13 @@ public class Driver {
                 case "chrome":
                     driver = ChromeWebDriver.loadChromeDriver();
                     break;
+                case "edge":
+                    driver = EdgeWebDriver.loadEdgeDriver();
+                    break;
+                case "opera":
+                    driver = OperaWebDriver.loadOpera();
+                    break;
+
                 default:
                     throw new IllegalArgumentException("You provide wrong Driver  name");
             }

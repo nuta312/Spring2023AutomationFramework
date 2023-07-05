@@ -14,6 +14,7 @@ import java.time.Duration;
     public abstract class BaseTest {
         public WebDriver driver;
 
+        @BeforeClass
         public void setUpBrowser() {
             driver = Driver.getDriver();
         }
