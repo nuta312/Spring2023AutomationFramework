@@ -6,26 +6,24 @@ import java.util.Properties;
 
 public class ConfigReader {
     private static Properties properties;
-
     static {
-        try {
+        try{
             String path = "src/main/resources/app.properties";
-            FileInputStream input = new FileInputStream("path");
-            Properties properties= new Properties();
+            FileInputStream input =new FileInputStream(path);
+            properties=new Properties();
             properties.load(input);
             input.close();
-        } catch (IOException e) {
+        } catch (IOException e){
             e.printStackTrace();
         }
     }
-    public static String getProperty(String key){
-        return properties.getProperty(key).trim();
-    }
+    public static String getProperty (String key){
 
+        return properties.getProperty(key);
+    }
     public static void main(String[] args) {
-        System.out.println(getProperty("browser"));
+        System.out.println(getProperty("name"));
+        System.out.println(getProperty("mobile"));
     }
-
 }
-
 

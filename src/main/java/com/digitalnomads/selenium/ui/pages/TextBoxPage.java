@@ -10,6 +10,17 @@ public class TextBoxPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(id="userName")
+    public WebElement userFullName;
 
-    public WebElement
+    @FindBy(id="userEmail")
+    public WebElement userEmail;
+
+    @FindBy(id="currentAddress")
+    public WebElement currentAddress;
+
+    @FindBy (id="permanentAddress")
+    public WebElement permanentAddress;
+
+
+
 }

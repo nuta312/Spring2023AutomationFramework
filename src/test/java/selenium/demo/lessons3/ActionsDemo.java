@@ -14,7 +14,7 @@ public class ActionsDemo extends BaseTest {
 
     @Test
     void demo(){
-        driver.get("https://demoqa.com/buttons");
+        driver.navigate().to("https://demoqa.com/buttons");
         WebElement doubleClick= driver.findElement(By.id("doubleClickBtn"));
         Actions actions=new Actions(driver);
         actions.doubleClick(doubleClick).perform();
@@ -35,8 +35,6 @@ public class ActionsDemo extends BaseTest {
         Thread.sleep(3000);
 
         actions.clickAndHold();// увеличивает размер
-
-
 
     }
 }
