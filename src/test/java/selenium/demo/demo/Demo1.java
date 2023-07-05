@@ -30,8 +30,8 @@ public class Demo1 extends BaseTest {
 
         elementActions.writeText(textBoxPage.userFullName, "james Bond")
                 .writeText(textBoxPage.userEmail, "aika@gmail.com")
-                .writeText(textBoxPage.currentAddress, "Wall Street")
-                .writeText(textBoxPage.permanentAddress, "Some address");
+                .writeText(textBoxPage.userCurrentAddress, "Wall Street")
+                .writeText(textBoxPage.userPermanentAddress, "Some address");
 
 
     }

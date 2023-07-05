@@ -1,14 +1,10 @@
 package selenium.demo;
 import com.digitalnomads.selenium.ui.driverFactory.Driver;
 import com.digitalnomads.selenium.ui.pages.TextBoxPage;
-import com.digitalnomads.selenium.ui.webElementActions.ElementActions;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.digitalnomads.selenium.ui.helper.ElementActions;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
-import java.time.Duration;
 
 
 public abstract class BaseTest {

@@ -5,11 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PracticeFormPage {
-
-    public PracticeFormPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+public class PracticeFormPage extends  BasePage{
     @FindBy(xpath ="//input[@placeholder='First Name']")
     public WebElement firstName;
 
