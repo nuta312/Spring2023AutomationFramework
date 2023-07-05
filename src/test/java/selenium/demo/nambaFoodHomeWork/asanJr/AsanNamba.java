@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,8 +17,6 @@ public class AsanNamba {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        Actions actions = new Actions(driver);
-
         driver.get("https://nambafood.kg/");
 
         WebElement food = driver.findElement(By.xpath("//li//a[normalize-space()='Еда']"));
@@ -64,7 +61,7 @@ public class AsanNamba {
         WebElement userName = driver.findElement(By.xpath("//input[@id=\"food_order_client_name\"]"));
         userName.sendKeys(name);
 
-        String address = "Тоголок";
+        String address = "Тоголо";
         WebElement userAddress = driver.findElement(By.xpath("//input[@id=\"food_order_address\"]"));
         userAddress.sendKeys(address);
 
@@ -128,7 +125,7 @@ public class AsanNamba {
 
 
         WebElement resultTimeDelivery = driver
-                .findElement(By.xpath("Как можно скорее"));
+                .findElement(By.xpath("//span[text()='Время доставки:']//following-sibling::span"));
         Assert.assertEquals(resultTimeDelivery.getText(), "Как можно скорее");
 
     }
