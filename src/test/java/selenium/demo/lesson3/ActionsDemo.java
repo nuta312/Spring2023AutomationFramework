@@ -6,7 +6,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import selenium.demo.BaseTest;
 
-import static org.testng.AssertJUnit.assertTrue;
+import static org.testng.AssertJUnit.*;
+
 
 public class ActionsDemo extends BaseTest {
 

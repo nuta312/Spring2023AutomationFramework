@@ -20,13 +20,13 @@ public abstract class BaseTest {
 
     @BeforeClass
     public void setUpBrowser() {
-        driver=Driver.getDriver();
-       elementActions= new ElementActions();
-       textBoxPage = new TextBoxPage();
+        driver = Driver.getDriver();
+        elementActions = new ElementActions();
+        textBoxPage = new TextBoxPage();
     }
 
     @AfterClass
-    public void tearDown(){
+    public void tearDown() {
         driver.close();
         driver.quit();
     }
