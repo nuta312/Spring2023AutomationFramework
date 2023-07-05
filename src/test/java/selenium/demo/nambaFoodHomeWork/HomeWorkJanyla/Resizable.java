@@ -1,6 +1,6 @@
 package selenium.demo.nambaFoodHomeWork.HomeWorkJanyla;
 
-import com.digitalnomads.selenium.WebElementActions;
+import com.digitalnomads.WebElementActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
