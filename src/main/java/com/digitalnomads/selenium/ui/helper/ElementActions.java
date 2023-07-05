@@ -1,6 +1,8 @@
-package com.digitalnomads.selenium.ui.WebElementActions;
+package com.digitalnomads.selenium.ui.helper;
 
 import com.digitalnomads.selenium.ui.drivers.Driver;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -30,6 +32,12 @@ public class ElementActions {
     public ElementActions writeText(WebElement element, String text){
         waitElementToBeDisplayed(element);
         element.sendKeys(text);
+        return this;
+    }
+
+    public ElementActions scrollToElement(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
         return this;
     }
 }
