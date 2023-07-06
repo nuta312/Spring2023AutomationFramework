@@ -2,27 +2,31 @@ package selenium.demo;
 
 
 import com.digitalnomads.driverFactory.Driver;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.digitalnomads.pages.TextBoxPage;
+import com.digitalnomads.helper.ElementActions;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 
-import java.time.Duration;
+public abstract class BaseTest {
+    public WebDriver driver;
+    public ElementActions elementActions;
+    public TextBoxPage textbox;
 
-    public abstract class BaseTest {
-        public WebDriver driver;
+    @BeforeClass
+    public void setUpBrowser() {
+        driver = Driver.getDriver();
+        elementActions = new ElementActions();
+        textbox = new TextBoxPage();
+    }
 
-        @BeforeClass
-        public void setUpBrowser() {
-            driver = Driver.getDriver();
-        }
-
-        @AfterClass
-        public void tearDown() {
-            Driver.closeDriver();
-        }
+    @AfterClass
+    public void tearDown() {
+        Driver.closeDriver();
 
     }
+
+
+
+}
 

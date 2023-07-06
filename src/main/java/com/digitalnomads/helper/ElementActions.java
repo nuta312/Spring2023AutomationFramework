@@ -1,4 +1,4 @@
-package com.digitalnomads.webElementActions;
+package com.digitalnomads.helper;
 
 import com.digitalnomads.driverFactory.Driver;
 import org.openqa.selenium.WebElement;
