@@ -12,7 +12,7 @@ public class PracticeFormTest extends BaseTest {
         driver.get("https://demoqa.com/automation-practice-form");
 
         PracticeFormPage page = new PracticeFormPage();
-        elementActions.scrollToElement(driver.findElement(By.xpath("//div[@id=\"userName-wrapper\"]")));
+
         page.fillUpTheForm("Aidin","Iskenderov","aidin@gmail.com", "other","0772342576",
                  "sports","Mederova 8/1");
         Thread.sleep(3000);
