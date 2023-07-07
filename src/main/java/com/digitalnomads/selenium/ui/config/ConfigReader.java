@@ -20,8 +20,7 @@ public class ConfigReader {
         }
     }
 
-    public static String getProperty(String key){
-        return properties.getProperty(key).trim();
+    public static String getProperty(String key){return properties.getProperty(key).trim();
     }
 
     public static void main(String[] args) {

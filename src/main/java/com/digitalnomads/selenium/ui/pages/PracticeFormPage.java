@@ -58,4 +58,9 @@ public class PracticeFormPage extends BasePage {
     @FindBy(id = "react-select-4-input")
     public WebElement selectCity;
 
+    public PracticeFormPage fillUpTheFirstname(String firstName){
+        elementActions.writeText(this.firstName, firstName);
+        return this;
+    }
+
 }
