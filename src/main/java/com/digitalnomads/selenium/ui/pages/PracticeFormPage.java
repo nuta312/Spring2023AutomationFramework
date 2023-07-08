@@ -63,4 +63,10 @@ public class PracticeFormPage extends BasePage {
         return this;
     }
 
+    public PracticeFormPage fillUpTheLastName(String lastName){
+        elementActions.writeText(this.lastName, lastName);
+        return this;
+    }
+
 }
+
