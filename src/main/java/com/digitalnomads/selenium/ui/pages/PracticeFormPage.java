@@ -6,56 +6,46 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class PracticeFormPage extends BasePage {
-    public PracticeFormPage() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
+    @FindBy (id="firstName")
+    public WebElement fistName;
 
-    @FindBy(id = "firstName")
-    public WebElement firstName;
-
-    @FindBy(id = "lastName")
+    @FindBy (id="lastName")
     public WebElement lastName;
 
-    @FindBy(id = "userEmail")
+    @FindBy (id="userEmail")
     public WebElement userEmail;
 
-    @FindBy(id = "gender-radio-1")
-    public WebElement genderMale;
+    @FindBy (xpath="//label[text()='Male']")
+    public WebElement gender;
 
-    @FindBy(id = "gender-radio-2")
-    public WebElement genderFemale;
-
-    @FindBy(id = "gender-radio-3")
-    public WebElement genderOther;
-
-    @FindBy(id = "userNumber")
+    @FindBy (id="userNumber")
     public WebElement userNumber;
 
-    @FindBy(id = "dateOfBirthInput")
+    @FindBy (id="dateOfBirthInput")
     public WebElement dateOfBirthInput;
 
-    @FindBy(id = "subjectsInput")
-    public WebElement subjectsInput;
+    @FindBy (xpath="//label[text()='Reading']")
+    public WebElement readin;
 
-    @FindBy(id = "hobbies-checkbox-1")
-    public WebElement hobbiesSports;
+    @FindBy (id="uploadPicture")
+    public WebElement choseFile;
 
-    @FindBy(id = "hobbies-checkbox-2")
-    public WebElement hobbiesReading;
-
-    @FindBy(id = "hobbies-checkbox-3")
-    public WebElement hobbiesMusic;
-
-    @FindBy(id = "uploadPicture")
-    public WebElement uploadPicture;
-
-    @FindBy(id = "currentAddress")
+    @FindBy (id="currentAddress")
     public WebElement currentAddress;
+    @FindBy (css = "div.react-datepicker__day.react-datepicker__day--012")
+    public  WebElement data;
+    public  void  writeall (){
+        elementActions.writeText(fistName,faker.name().firstName())
+                .writeText(lastName,faker.name().lastName())
+                .writeText(userEmail,faker.internet().emailAddress())
+                .clickTheButton(gender)
+                .writeText(userNumber,faker.number().digits(10))
+                .clickTheButton(dateOfBirthInput).clickTheButton(data).scrollToElement(readin)
+              .clickTheButton(readin).scrollToElement(choseFile)
+                .writeText(currentAddress,faker.address().fullAddress());
+choseFile.sendKeys("/Users/mac/IdeaProjects/Maven_project/selenium-java-4.9.0 2/Spring2023AutomationFramework/src/main/java/img/Без названия.jpeg");
+    }
 
-    @FindBy(id = "react-select-3-input")
-    public WebElement selectState;
 
-    @FindBy(id = "react-select-4-input")
-    public WebElement selectCity;
 
 }

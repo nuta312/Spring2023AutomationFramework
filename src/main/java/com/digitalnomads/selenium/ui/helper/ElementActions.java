@@ -4,6 +4,7 @@ import com.digitalnomads.selenium.ui.drivers.Driver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -38,6 +39,12 @@ public class ElementActions {
     public ElementActions scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", element);
+        return this;
+    }
+    public ElementActions scrollActions (WebElement element){
+        WebDriver driver = Driver.getDriver();
+        Actions actions = new Actions(driver);
+        actions.scrollToElement(element);
         return this;
     }
 }
