@@ -1,6 +1,7 @@
 package com.digitalnomads.selenium.ui.pages;
 
 import com.digitalnomads.selenium.ui.drivers.Driver;
+import com.digitalnomads.selenium.ui.models.User;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -92,5 +93,7 @@ public class PracticeFormPage extends BasePage {
         elementActions.writeText(this.userNumber, userNumber);
         return this;
     }
+
+
 }
 
