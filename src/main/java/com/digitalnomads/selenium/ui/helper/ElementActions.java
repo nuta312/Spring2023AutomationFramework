@@ -2,8 +2,10 @@ package com.digitalnomads.selenium.ui.helper;
 
 import com.digitalnomads.selenium.ui.driverFactory.Driver;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -40,5 +42,18 @@ public class ElementActions {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
    return this;
     }
+    public ElementActions moveToElement(WebElement element){
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(element).perform();
+        return this;
+
+   }
+   public ElementActions writeTextWithEnter(WebElement element, String txt){
+        waitElementToBeDisplayed(element);
+        element.sendKeys(txt,Keys.ARROW_DOWN);
+        element.sendKeys(Keys.ENTER);
+        return this;
+
+   }
 }
 

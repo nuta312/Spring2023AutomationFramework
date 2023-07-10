@@ -9,14 +9,18 @@ public class Driver {
         //Singleton pattern
     }
     private static WebDriver driver;
-    public static WebDriver getDriver(){
-        if (driver == null){
-        switch ( ConfigReader.getProperty("browser").toLowerCase()){
+
+    public static WebDriver getDriver() {
+        if (driver == null) {
+            switch (ConfigReader.getProperty("browser").toLowerCase()) {
                 case "chrome":
                     driver = ChromeWebDriver.loadChromeDriver();
                     break;
                 case "fireFox":
                     driver = FireFoxWebDriver.loadFireFoxWebDriver();
+                    break;
+                case "edge":
+                    driver = EdgeWebDriver.loadEdgeWebDriver();
                     break;
                 default:
                     throw new IllegalArgumentException("Error: wrong name driver");
