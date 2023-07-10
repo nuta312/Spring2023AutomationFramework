@@ -94,6 +94,5 @@ public class PracticeFormPage extends BasePage {
         return this;
     }
 
-
 }
 

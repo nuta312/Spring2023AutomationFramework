@@ -11,12 +11,8 @@ public class PracticeFormPage extends BaseTest {
     void practiceFormPage() throws InterruptedException {
         driver.get("https://demoqa.com/automation-practice-form");
 
-        FakeDataProvider fakeDataProvider = new FakeDataProvider();
-        PracticeFormPage practiceFormPage1 = new PracticeFormPage();
-        User user = new User(fakeDataProvider.generateFakeFullName(),
-                fakeDataProvider.generateFakeEmail(),
-                fakeDataProvider.generateFakeCurrentAddress(),
-                fakeDataProvider.generateFakePermanentAddress());
+
+
 
 
 
