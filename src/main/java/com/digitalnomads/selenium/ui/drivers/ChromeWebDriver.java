@@ -12,7 +12,7 @@ public class ChromeWebDriver {
     public static WebDriver loadChromeDriver() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable--extensions");
+        options.addArguments("user-data-dir=C:\\profile");
 
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();

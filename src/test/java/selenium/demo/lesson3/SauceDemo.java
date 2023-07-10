@@ -4,7 +4,6 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import selenium.demo.lesson2.BaseTest;
@@ -64,7 +63,7 @@ public class SauceDemo extends BaseTest {
         Thread.sleep(3000);
 
     }
-    @Test
+    @Test(priority = 5)
     void order() throws InterruptedException {
         driver.get("https://www.saucedemo.com/");
 
