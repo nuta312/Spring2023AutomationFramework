@@ -2,6 +2,7 @@ package com.digitalnomads.selenium.ui.helper;
 
 import com.digitalnomads.selenium.ui.drivers.Driver;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -38,6 +39,19 @@ public class ElementActions {
     public ElementActions scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", element);
+        return this;
+    }
+
+    public ElementActions clickJS (WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].click(true);", element);
+        return this;
+    }
+
+    public ElementActions writeTextWithEnter(WebElement element,String txt){
+        waitElementToBeDisplayed(element);
+        element.sendKeys(txt, Keys.ARROW_DOWN);
+        element.sendKeys(Keys.ENTER);
         return this;
     }
 }
