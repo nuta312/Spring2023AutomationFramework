@@ -58,7 +58,7 @@ public class PracticeFormPage extends BaseTest {
     @FindBy(id = "currentAddress")
     public WebElement currentAddress;
 
-    @FindBy(xpath = "(//div[@class=\" css-1wy0on6\"])[1]")
+    @FindBy(xpath = "(//div[@class=\" css-1hwfws3\"])[1]")
     public WebElement selectState;
 
     @FindBy(xpath = "(//div[@class=\" css-1wy0on6\"])[2]")
@@ -78,8 +78,7 @@ public class PracticeFormPage extends BaseTest {
             case "female": genderFemale.click(); break;
             default: genderOther.click(); break;
         }
-        actions.writeText(subjectsInput,"English");
-        subjectsInput.sendKeys(Keys.TAB);
+        subjectsInput.sendKeys("English",Keys.TAB);
         actions.writeText(this.userNumber,mbobileNumber);
         switch (hobbies.toLowerCase()){
             case "sports": hobbiesSports.click(); break;
@@ -89,6 +88,7 @@ public class PracticeFormPage extends BaseTest {
 //.writeText(this.uploadPicture,"/Users/aidiniskenderov/Downloads/Курсовая\\ Эконом\\ орг\\ \\(Айдин\\).docx");
         actions.writeText(this.currentAddress,currentAddress);
         actions.scrollToElement(this.currentAddress);
+        selectState.sendKeys("NCR",Keys.TAB);
         actions.clickTheButton(submit);
         return this;
     }
