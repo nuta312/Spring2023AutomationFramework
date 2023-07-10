@@ -3,6 +3,7 @@ package selenium.demo.nambaFoodHomeWork.aidinHomeWork.pages;
 import com.digitalnomads.selenium.ui.drivers.Driver;
 import com.digitalnomads.selenium.ui.helper.ElementActions;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -72,7 +73,9 @@ public class PracticeFormPage extends BaseTest {
         actions.clickTheButton(Driver.getDriver().findElement(By.xpath("//div[@class=\"header-right\"]")))
                 .scrollToElement(this.firstName)
                 .writeText(this.firstName,firstName).writeText(this.lastName,lastName).writeText(this.userEmail,email)
-                .writeText(this.userNumber,mbobileNumber).writeText(this.currentAddress,currentAddress);
+                .writeText(this.userNumber,mbobileNumber).writeText(this.currentAddress,currentAddress)
+                .writeText(subjectsInput,"English");
+        subjectsInput.sendKeys(Keys.TAB);
 //                .writeText(this.uploadPicture,"/Users/aidiniskenderov/Downloads/Курсовая\\ Эконом\\ орг\\ \\(Айдин\\).docx");
         switch (gender.toLowerCase()){
             case "male": genderMale.click(); break;
