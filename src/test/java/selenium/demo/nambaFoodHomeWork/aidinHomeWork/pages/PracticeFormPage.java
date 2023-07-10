@@ -40,6 +40,9 @@ public class PracticeFormPage extends BaseTest {
     @FindBy(id = "dateOfBirthInput")
     public WebElement dateOfBirthInput;
 
+    @FindBy(xpath = "//div[@class=\"react-datepicker__day react-datepicker__day--027\"]")
+    public WebElement june27;
+
     @FindBy(id = "subjectsInput")
     public WebElement subjectsInput;
 
@@ -58,7 +61,7 @@ public class PracticeFormPage extends BaseTest {
     @FindBy(id = "currentAddress")
     public WebElement currentAddress;
 
-    @FindBy(xpath = "(//div[@class=\" css-1wy0on6\"])[1]")
+    @FindBy(css = "#stateCity-wrapper #state")
     public WebElement selectState;
 
     @FindBy(xpath = "(//div[@class=\" css-1wy0on6\"])[2]")
@@ -80,7 +83,8 @@ public class PracticeFormPage extends BaseTest {
         }
         actions.writeText(subjectsInput,"English");
         subjectsInput.sendKeys(Keys.TAB);
-        actions.writeText(this.userNumber,mbobileNumber);
+        actions.writeText(this.userNumber,mbobileNumber).clickTheButton(dateOfBirthInput)
+                .clickTheButton(june27);
         switch (hobbies.toLowerCase()){
             case "sports": hobbiesSports.click(); break;
             case "reading": hobbiesReading.click(); break;
@@ -88,7 +92,6 @@ public class PracticeFormPage extends BaseTest {
         }
 //.writeText(this.uploadPicture,"/Users/aidiniskenderov/Downloads/Курсовая\\ Эконом\\ орг\\ \\(Айдин\\).docx");
         actions.writeText(this.currentAddress,currentAddress);
-        actions.scrollToElement(this.currentAddress);
         actions.clickTheButton(submit);
         return this;
     }
