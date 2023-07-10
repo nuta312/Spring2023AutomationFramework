@@ -58,15 +58,39 @@ public class PracticeFormPage extends BasePage {
     @FindBy(id = "react-select-4-input")
     public WebElement selectCity;
 
-    public PracticeFormPage fillUpTheFirstname(String firstName){
+    public PracticeFormPage fillUpTheFirstname(String firstName) {
         elementActions.writeText(this.firstName, firstName);
         return this;
     }
 
-    public PracticeFormPage fillUpTheLastName(String lastName){
+    public PracticeFormPage fillUpTheLastName(String lastName) {
         elementActions.writeText(this.lastName, lastName);
         return this;
     }
 
+    public PracticeFormPage fillUpTheEmail(String userEmail) {
+        elementActions.writeText(this.userEmail, userEmail);
+        return this;
+    }
+
+    public PracticeFormPage fillUpTheGenderMale() {
+        elementActions.clickTheButton(this.genderMale);
+        return this;
+    }
+
+    public PracticeFormPage fillUpTheGenderFemale() {
+        elementActions.clickTheButton(this.genderFemale);
+        return this;
+    }
+
+    public PracticeFormPage fillUpTheGenderOther() {
+        elementActions.clickTheButton(this.genderOther);
+        return this;
+    }
+
+    public  PracticeFormPage fillUpTheUserNumber(String userNumber){
+        elementActions.writeText(this.userNumber, userNumber);
+        return this;
+    }
 }
 
