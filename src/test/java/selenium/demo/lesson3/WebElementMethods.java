@@ -6,21 +6,11 @@ import org.testng.annotations.Test;
 import selenium.demo.BaseTest;
 
 public class WebElementMethods extends BaseTest {
-    /***  WebElement methods
-     * 1. clear();
-     *
-     *
-     * */
 
     @Test
-    void demo() throws InterruptedException {
+    void demo(){
         driver.get("https://demoqa.com/text-box");
-        WebElement fullName = driver.findElement(By.cssSelector("input#userName"));
-        fullName.sendKeys("John Wick");
-        Thread.sleep(3000);
-        fullName.clear();
-        Thread.sleep(3000);
-        fullName.sendKeys("Chika");
-        System.out.println(fullName.getAttribute("value"));
+        WebElement fullName = driver.findElement(By.id("userName"));
+        //  fullName.
     }
 }

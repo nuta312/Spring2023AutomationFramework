@@ -10,7 +10,7 @@ public class XpathPractice extends BaseTest {
     @Test
     void xpathDemo1() {
         driver.get("https://demoqa.com/text-box");
-        String fullNameText = driver.findElement(By.xpath("/html[1]/body/div[2]/div/div/div[2]/div[2]/div[2]/form/div[1]/div[1]")).getText();
+        String fullNameText = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div[2]/form/div[1]/div[1]")).getText();
         System.out.println(fullNameText);
     }
 

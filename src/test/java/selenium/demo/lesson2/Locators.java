@@ -1,18 +1,27 @@
 package selenium.demo.lesson2;
 
+import com.digitalnomads.selenium.ui.drivers.Driver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 
 public class Locators extends BaseTest {
 
     @Test
     void byTagNameTest() {
+
         driver.get("https://demoqa.com/automation-practice-form");
-        WebElement studentRegForm = driver.findElement(By.tagName("h5"));
-        String studentForm = studentRegForm.getText();
+        WebElement studentRegistrationForm = driver.findElement(By.tagName("h5"));
+        String studentForm = studentRegistrationForm.getText();
         System.out.println(studentForm);
+
+
     }
 
     @Test
@@ -23,14 +32,15 @@ public class Locators extends BaseTest {
     }
 
     @Test
-    void linkTextTest() {
+    public void LinkTextTest(){
         driver.get("https://demoqa.com/links");
-        String homeLink = driver.findElement(By.linkText("Home")).getText();
-        System.out.println(homeLink);
+        String HomeLink = driver.findElement(By.linkText("Home")).getText();
+        System.out.println(HomeLink);
+
     }
 
     @Test
-    void partialLinkText() {
+    void partialLinkTextTest(){
         driver.get("https://demoqa.com/links");
         String someText = driver.findElement(By.partialLinkText("Request")).getText();
         System.out.println(someText);
