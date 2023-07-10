@@ -71,22 +71,23 @@ public class PracticeFormPage extends BaseTest {
                                           String email, String gender,String mbobileNumber, String hobbies,
                                           String currentAddress){
         actions.clickTheButton(Driver.getDriver().findElement(By.xpath("//div[@class=\"header-right\"]")))
-                .scrollToElement(this.firstName)
-                .writeText(this.firstName,firstName).writeText(this.lastName,lastName).writeText(this.userEmail,email)
-                .writeText(this.userNumber,mbobileNumber).writeText(this.currentAddress,currentAddress)
-                .writeText(subjectsInput,"English");
-        subjectsInput.sendKeys(Keys.TAB);
-//                .writeText(this.uploadPicture,"/Users/aidiniskenderov/Downloads/Курсовая\\ Эконом\\ орг\\ \\(Айдин\\).docx");
+                .scrollToElement(this.firstName).writeText(this.firstName,firstName)
+                .writeText(this.lastName,lastName).writeText(this.userEmail,email);
         switch (gender.toLowerCase()){
             case "male": genderMale.click(); break;
             case "female": genderFemale.click(); break;
             default: genderOther.click(); break;
         }
+        actions.writeText(subjectsInput,"English");
+        subjectsInput.sendKeys(Keys.TAB);
+        actions.writeText(this.userNumber,mbobileNumber);
         switch (hobbies.toLowerCase()){
             case "sports": hobbiesSports.click(); break;
             case "reading": hobbiesReading.click(); break;
             case "music": hobbiesMusic.click(); break;
         }
+//.writeText(this.uploadPicture,"/Users/aidiniskenderov/Downloads/Курсовая\\ Эконом\\ орг\\ \\(Айдин\\).docx");
+        actions.writeText(this.currentAddress,currentAddress);
         actions.scrollToElement(this.currentAddress);
         actions.clickTheButton(submit);
         return this;
