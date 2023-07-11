@@ -42,21 +42,24 @@ public class ElementActions {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
         return this;
     }
-<<<<<<< HEAD
 
-    public ElementActions writeTextWithEnter(WebElement element, String txt){
+    public ElementActions scrollActions(WebElement element) {
+        WebDriver driver = Driver.getDriver();
+        Actions actions = new Actions(driver);
+        actions.scrollToElement(element);
+        return this;
+    }
+
+
+    public ElementActions writeTextWithEnter(WebElement element, String txt) {
         waitElementToBeDisplayed(element);
         element.sendKeys(txt, Keys.ARROW_DOWN);
         element.sendKeys(Keys.ENTER);
         return this;
 
 
-=======
-    public ElementActions scrollActions (WebElement element){
-        WebDriver driver = Driver.getDriver();
-        Actions actions = new Actions(driver);
-        actions.scrollToElement(element);
-        return this;
->>>>>>> origin/master
+
+
+        }
     }
-}
+
