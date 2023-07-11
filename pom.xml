@@ -22,7 +22,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.8.0</version>
-            <scope>test</scope>
+
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -44,7 +44,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.28</version>
-            <scope>provided</scope>
+
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->

@@ -6,9 +6,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 import java.time.Duration;
 
-public class OperaWebDriver {
+public class EdgeWebDriver {
 
-    public static WebDriver loadOperaWebDriver(){
+    public static WebDriver loadEdgeWebDriver(){
         WebDriverManager.edgedriver().setup();
         EdgeDriver options = new EdgeDriver();
         WebDriver driver = new EdgeDriver();

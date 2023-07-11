@@ -88,11 +88,5 @@ public class PracticeFormPage extends BasePage {
         elementActions.clickTheButton(this.genderOther);
         return this;
     }
-
-    public  PracticeFormPage fillUpTheUserNumber(String userNumber){
-        elementActions.writeText(this.userNumber, userNumber);
-        return this;
-    }
-
 }
 

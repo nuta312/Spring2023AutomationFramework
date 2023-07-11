@@ -10,7 +10,7 @@ import selenium.demo.BaseTest;
 
 import java.time.Duration;
 
-public class alertDemoTests extends BaseTest {
+public class AlertDemoTests extends BaseTest {
 
     @Test
     void alertDemo() throws InterruptedException {
