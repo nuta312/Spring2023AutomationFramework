@@ -8,7 +8,7 @@ import com.digitalnomads.selenium.ui.pages.TextBoxPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import selenium.demo.nambaFoodHomeWork.ChikaHomeWork.pages.SelectHelper;
+import selenium.demo.nambaFoodHomeWork.ChikaHomeWork.helper.SelectHelper;
 import selenium.demo.nambaFoodHomeWork.ChikaHomeWork.pages.SelectPage;
 
 public abstract class BaseTest {
