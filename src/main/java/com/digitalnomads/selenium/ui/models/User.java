@@ -4,10 +4,9 @@ import lombok.*;
 
 @EqualsAndHashCode
 @ToString
-@Setter
 @Getter
 @AllArgsConstructor
-@NoArgsConstructor
+@Builder
 public class User {
 
     private String userFullName;
