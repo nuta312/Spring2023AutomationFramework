@@ -8,8 +8,12 @@ import lombok.*;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class User {
 
+    private String userFirstName;
+    private String userLastName;
+    private String password;
     private String userFullName;
     private String userEmail;
     private String userCurrentAddress;

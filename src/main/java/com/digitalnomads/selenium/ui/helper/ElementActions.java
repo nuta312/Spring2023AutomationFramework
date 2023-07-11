@@ -47,4 +47,14 @@ public class ElementActions {
         actions.scrollToElement(element);
         return this;
     }
+    public ElementActions clickWithJs(WebElement element) {
+        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
+        executor.executeScript("arguments[0].click();", element);
+        return this;
+    }
+    public ElementActions highlightElement(WebElement element) {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) Driver.getDriver();
+        jsExecutor.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "border: 2px solid red");
+        return this;
+    }
 }
