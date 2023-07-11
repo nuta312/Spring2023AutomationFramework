@@ -36,7 +36,7 @@ public class User {
 
     public User(String generateFakeFirstName,
                 String generateFakeLastName, String generateFakeEmail,
-                String generateFakeGender, String generateFakeSubject,
+                String generateFakeGender,
                 String generateFakeCurrentAddress) {
     }
 

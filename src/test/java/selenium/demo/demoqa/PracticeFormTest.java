@@ -17,14 +17,21 @@ public class PracticeFormTest extends BaseTest {
         driver.get("https://demoqa.com/automation-practice-form");
         FakeDataProvider faker = new FakeDataProvider();
         PracticeFormPage practiceForm = new PracticeFormPage();
-        User user = new User(faker.generateFakeFirstName(), faker.generateFakeLastName(), faker.generateFakeEmail(), faker.generateFakeGender(),
-                faker.generateFakeSubject(), faker.generateFakeCurrentAddress());
-        WebElementActions.scrollToElement(driver, driver.findElement(By.id("uploadPicture")));
-        Thread.sleep(4000);
-        WebElement uploadFile = driver.findElement(By.id("uploadPicture"));
-//        uploadFile.click();
-        Thread.sleep(3000);
-        uploadFile.sendKeys("\"C:\\Users\\Victus\\Desktop\\Снимок экрана 2023-06-30 171420.png\"");
+        User user = new User(faker.generateFakeFirstName(), faker.generateFakeLastName(),
+                faker.generateFakeEmail(), faker.generateFakePhoneNumber(), faker.generateFakeCurrentAddress());
+                WebElementActions.scrollToElement(driver, driver.findElement(By.id("uploadPicture")));
+                Thread.sleep(4000);
+
+        practiceForm.fillUpTheStudentRegistrationForm(user);
+        Thread.sleep(5000);
+
+
+//        WebElementActions.scrollToElement(driver, driver.findElement(By.id("uploadPicture")));
+//        Thread.sleep(4000);
+//        WebElement uploadFile = driver.findElement(By.id("uploadPicture"));
+////        uploadFile.click();
+//        Thread.sleep(3000);
+//        uploadFile.sendKeys("\"C:\\Users\\Victus\\Desktop\\Снимок экрана 2023-06-30 171420.png\"");
     }
 
     }

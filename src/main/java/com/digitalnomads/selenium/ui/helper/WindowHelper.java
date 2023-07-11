@@ -7,21 +7,23 @@ import java.util.Set;
 
 public class WindowHelper {
     private WebDriver driver;
+
     public WindowHelper(WebDriver driver) {
         this.driver = driver;
     }
-    public void goBack(){
+    public void goBack() {
         driver.navigate().back();
     }
 
-    public void goForward(){
+    public void goForward() {
         driver.navigate().forward();
     }
 
-    public void refreshThePage(){
+    public void refreshThePage() {
         driver.navigate().refresh();
     }
-    public Set <String> getWindowTabs(){
+
+    public Set<String> getWindowTabs() {
         return driver.getWindowHandles();
     }
 

@@ -1,18 +1,17 @@
 package com.digitalnomads.selenium.ui.pages;
 
-import com.digitalnomads.selenium.ui.driverFactory.Driver;
-import com.digitalnomads.selenium.ui.helper.ElementActions;
 import com.digitalnomads.selenium.ui.models.User;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class PracticeFormPage extends  BasePage{
 
-    @FindBy(xpath ="//input[@placeholder='First Name']")
+
+
+    @FindBy(id="firstName")
     public WebElement firstName;
 
-    @FindBy (xpath = "//input[@placeholder='Last Name']")
+    @FindBy (id = "lastName")
     public WebElement lastName;
 
     @FindBy (xpath = "//input[@placeholder='name@example.com']")
@@ -66,32 +65,34 @@ public class PracticeFormPage extends  BasePage{
     @FindBy(id="submit")
     public WebElement submit;
 
-    public PracticeFormPage fillUpTheStudentRegistrationForm(User userDetails, String hobbies) {
+
+
+    public PracticeFormPage fillUpTheStudentRegistrationForm(User userDetails) {
         elementActions.writeText(firstName, userDetails.getFirstName())
                 .writeText(lastName, userDetails.getLastName())
                 .writeText(userEmail, userDetails.getUserEmail())
                 .writeText(mobileNumber, userDetails.getMobileNumber())
-                .writeText(dateOfBirth, userDetails.getDateOfBirth())
                 .writeText(currentAddress, userDetails.getUserCurrentAddress());
-        if (gender.equals("male")) {
-            genderMale.click();
-        } else if(gender.equals("female")){
-            genderFemale.click();
-        } else{
-            genderOther.click();
-        }
-
-        switch(hobbies.toLowerCase()){
-            case "sports": hobbiesSports.click();
-            break;
-            case "reading": hobbiesReading.click();
-            break;
-            case "music": hobbiesMusic.click();
-
-        }
-         elementActions.scrollToElement(submit);
-        elementActions.clickTheButton(submit);
-
         return this;
+//        if (gender.equals("male")) {
+//            genderMale.click();
+//        } else if(gender.equals("female")){
+//            genderFemale.click();
+//        } else{
+//            genderOther.click();
+//        }
+//
+//
+//        if (hobbies.equals("sports")) {
+//            hobbiesSports.click();
+//        } else if (hobbies.equals("reading")) {
+//            hobbiesReading.click();
+//        } else if (hobbies.equals("music")) {
+//            hobbiesMusic.click();
+//        }
+//         elementActions.scrollToElement(submit);
+//        elementActions.clickTheButton(submit);
+//
+//        return this;
     }
 }

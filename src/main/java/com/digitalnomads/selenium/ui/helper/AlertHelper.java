@@ -14,35 +14,37 @@ public class AlertHelper {
     private WebDriver driver = Driver.getDriver();
 
     public AlertHelper(WebDriver driver){
-        this.driver= this.driver;
+        this.driver= driver;
 
     }
     public Alert switchtoAlert(){
+
         return driver.switchTo().alert();
     }
 
     public void acceptAlert(){
-        new WebDriverWait(driver, Duration.ofSeconds(10)).
-                until(ExpectedConditions.alertIsPresent());
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+        .until(ExpectedConditions.alertIsPresent());
         switchtoAlert().accept();
 
     }
-    public void dismissAlert(){
+
+    public void dismissAlert() {
         new WebDriverWait(driver, Duration.ofSeconds(10)).
                 until(ExpectedConditions.alertIsPresent());
         switchtoAlert().dismiss();
     }
-    public void sendKeysAlert(String txt){
+
+    public void sendKeysAlert(String txt) {
         switchtoAlert().sendKeys(txt);
         acceptAlert();
     }
 
-    public boolean isAlertPresented(){
-        try{
-
-            driver.switchTo().alert().accept();
+    public boolean isAlertPresented() {
+        try {
+            acceptAlert();
             return true;
-        }catch(NoAlertPresentException e){
+        } catch (NoAlertPresentException e) {
             System.out.println("no such alert");
             return false;
         }

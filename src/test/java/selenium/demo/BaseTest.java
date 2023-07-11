@@ -1,5 +1,6 @@
 package selenium.demo;
 import com.digitalnomads.selenium.ui.driverFactory.Driver;
+import com.digitalnomads.selenium.ui.pages.PracticeFormPage;
 import com.digitalnomads.selenium.ui.pages.TextBoxPage;
 import com.digitalnomads.selenium.ui.helper.ElementActions;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,7 @@ public abstract class BaseTest {
     public ElementActions elementActions;
 
     public TextBoxPage textBoxPage;
+    public PracticeFormPage practiceFormPage;
 
 
     @BeforeClass
@@ -19,6 +21,7 @@ public abstract class BaseTest {
         driver = Driver.getDriver();
         elementActions = new ElementActions();
         textBoxPage = new TextBoxPage();
+        practiceFormPage = new PracticeFormPage();
     }
 
     @AfterClass

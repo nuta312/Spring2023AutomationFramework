@@ -38,17 +38,17 @@ public class AlertDemoTest extends BaseTest {
         driver.findElement(By.id("alertButton")).click();
         AlertHelper alertHelper = new AlertHelper(driver);
         alertHelper.acceptAlert();
-        Thread.sleep(5000);
-        driver.findElement(By.id("timerAlertButton")).click();
+        Thread.sleep(3000);
 
+        driver.findElement(By.id("timerAlertButton")).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.alertIsPresent());
         alertHelper.acceptAlert();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         driver.findElement(By.id("confirmButton")).click();
         alertHelper.dismissAlert();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         driver.findElement(By.id("promtButton")).click();
         alertHelper.sendKeysAlert("Digital Nomads");
