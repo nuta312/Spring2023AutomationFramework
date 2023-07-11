@@ -14,8 +14,8 @@ public class SelectDemo extends BaseTest{
         driver.get("https://demoqa.com/select-menu");
 
         WebElement element = driver.findElement(By.id("oldSelectMenu"));
-        selectUsingVisibleText(element,"Black");
-        Thread.sleep(5000);
+//        selectUsingVisibleText(element,"Black");
+//        Thread.sleep(5000);
 
         System.out.println(selectUsingRandom(element));
         Thread.sleep(3000);
