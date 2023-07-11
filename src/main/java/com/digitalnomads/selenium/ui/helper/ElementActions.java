@@ -2,6 +2,7 @@ package com.digitalnomads.selenium.ui.helper;
 
 import com.digitalnomads.selenium.ui.drivers.Driver;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -44,7 +45,13 @@ public class ElementActions {
     public ElementActions scrollActions (WebElement element){
         WebDriver driver = Driver.getDriver();
         Actions actions = new Actions(driver);
-        actions.scrollToElement(element);
+        actions.moveToElement(element);
+        return this;
+    }
+
+    public ElementActions enterClick (WebElement element,String txt){
+       element.sendKeys(txt);
+       element.sendKeys(Keys.TAB);
         return this;
     }
 }
