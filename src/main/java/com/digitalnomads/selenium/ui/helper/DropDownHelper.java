@@ -5,6 +5,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 public class DropDownHelper {
 
@@ -22,7 +23,7 @@ public class DropDownHelper {
         new Select(element).selectByIndex(index);
     }
 
-    public static List<String > getAllDropDownsVal(WebElement locator){
+    public static List<String> getAllDropDownsVal(WebElement locator){
         Select select = new Select(locator);
         List<WebElement> elements = select.getOptions();
         List<String> valueList = new LinkedList<>();
@@ -30,5 +31,12 @@ public class DropDownHelper {
             valueList.add(element.getText());
         }
         return valueList;
+    }
+
+    public static String selectUsingRandom(WebElement element){
+        Random random = new Random();
+        int randomInt = random.nextInt(6);
+        new Select(element).selectByIndex(randomInt);
+        return getAllDropDownsVal(element).get(randomInt);
     }
 }
