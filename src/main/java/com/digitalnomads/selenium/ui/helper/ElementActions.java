@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -41,6 +42,7 @@ public class ElementActions {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
         return this;
     }
+<<<<<<< HEAD
 
     public ElementActions writeTextWithEnter(WebElement element, String txt){
         waitElementToBeDisplayed(element);
@@ -49,5 +51,12 @@ public class ElementActions {
         return this;
 
 
+=======
+    public ElementActions scrollActions (WebElement element){
+        WebDriver driver = Driver.getDriver();
+        Actions actions = new Actions(driver);
+        actions.scrollToElement(element);
+        return this;
+>>>>>>> origin/master
     }
 }
