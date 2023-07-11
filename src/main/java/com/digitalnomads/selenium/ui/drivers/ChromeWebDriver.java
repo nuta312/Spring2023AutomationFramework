@@ -11,10 +11,9 @@ public class ChromeWebDriver {
 
     public static WebDriver loadChromeDriver() {
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("user-data-dir=C:\\profile");
 
-        WebDriver driver = new ChromeDriver(options);
+
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         return driver;

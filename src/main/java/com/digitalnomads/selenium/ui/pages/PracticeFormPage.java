@@ -155,7 +155,7 @@ public class PracticeFormPage extends BasePage {
     }
 
     public PracticeFormPage submitBtn() {
-        submit.sendKeys(Keys.RETURN);
+        submit.sendKeys(Keys.ENTER);
         return this;
     }
 

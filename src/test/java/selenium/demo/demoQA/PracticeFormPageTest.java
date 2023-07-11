@@ -8,6 +8,7 @@ import selenium.demo.lesson2.BaseTest;
 
 public class PracticeFormPageTest extends BaseTest {
     FakeDataProvider fakeDataProvider = new FakeDataProvider();
+
     User user = new User.Builder().setUserFirstName(fakeDataProvider.generateFirstName())
             .setUserLastName(fakeDataProvider.generateLastName())
             .setUserEmail(fakeDataProvider.generateUserEmail())
