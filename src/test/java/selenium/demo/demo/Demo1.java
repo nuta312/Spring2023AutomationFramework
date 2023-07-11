@@ -1,8 +1,10 @@
 package selenium.demo.demo;
 
 import com.digitalnomads.WebElementActions;
+import com.digitalnomads.selenium.ui.pages.TextBoxPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +16,7 @@ import java.time.Duration;
 
 public class Demo1 extends BaseTest {
     @Test
-    public void textBoxTest() {
+    public void textBoxTest() throws InterruptedException {
 
 //        WebDriverManager.chromedriver().setup(); // setup chrome driver
 //        WebDriver driver = new ChromeDriver();
@@ -31,9 +33,18 @@ public class Demo1 extends BaseTest {
         elementActions.writeText(textBoxPage.userFullName, "james Bond")
                 .writeText(textBoxPage.userEmail, "aika@gmail.com")
                 .writeText(textBoxPage.userCurrentAddress, "Wall Street")
-                .writeText(textBoxPage.userPermanentAddress, "Some address");
+                .writeText(textBoxPage.userPermanentAddress, "Some address")
+                //.clickWithJS(submitBtn);
+                .highlightElement(submitBtn);
 
-
+                triggerAlert("Hello");
+                Thread.sleep(9000);
     }
+    public void triggerAlert(String alertMessage){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("alert('"+alertMessage+"');");
+    }
+
 }
+
 

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 public class DropDownHelper {
 
@@ -32,11 +33,16 @@ public class DropDownHelper {
             valueList.add(element.getText());
         }
         return valueList;
-
-
-
-        }
-
-
     }
+//    public static void selectRandomColor(WebElement element){
+//        Random random= new Random();
+//        List <String> colors= List.of("Red", "Black", "Yellow", "Purple", "White" +
+//                "Indigo", "Aqua", "Voilet", "Green", "Magenta");
+//        int index = random.nextInt();
+//        String color= colors.get(index);
+//        selectUsingVisibleText(element, color);
+    }
+
+
+
 
