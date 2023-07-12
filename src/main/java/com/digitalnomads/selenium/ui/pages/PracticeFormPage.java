@@ -1,8 +1,13 @@
 package com.digitalnomads.selenium.ui.pages;
 
+import com.digitalnomads.selenium.ui.driverFactory.Driver;
 import com.digitalnomads.selenium.ui.models.User;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 public class PracticeFormPage extends  BasePage{
 
@@ -65,34 +70,91 @@ public class PracticeFormPage extends  BasePage{
     @FindBy(id="submit")
     public WebElement submit;
 
-
-
-    public PracticeFormPage fillUpTheStudentRegistrationForm(User userDetails) {
-        elementActions.writeText(firstName, userDetails.getFirstName())
-                .writeText(lastName, userDetails.getLastName())
-                .writeText(userEmail, userDetails.getUserEmail())
-                .writeText(mobileNumber, userDetails.getMobileNumber())
-                .writeText(currentAddress, userDetails.getUserCurrentAddress());
+    public PracticeFormPage fillUpTheFirstName(User userDetails){
+        elementActions.writeText(firstName,userDetails.getUserFirstName());
         return this;
-//        if (gender.equals("male")) {
-//            genderMale.click();
-//        } else if(gender.equals("female")){
-//            genderFemale.click();
-//        } else{
-//            genderOther.click();
-//        }
-//
-//
-//        if (hobbies.equals("sports")) {
-//            hobbiesSports.click();
-//        } else if (hobbies.equals("reading")) {
-//            hobbiesReading.click();
-//        } else if (hobbies.equals("music")) {
-//            hobbiesMusic.click();
-//        }
-//         elementActions.scrollToElement(submit);
-//        elementActions.clickTheButton(submit);
-//
-//        return this;
+
     }
-}
+    public PracticeFormPage fillUpTheLastName(User userDetails){
+        elementActions.writeText(lastName, userDetails.getUserLastName());
+        return this;
+    }
+    public PracticeFormPage fillUpTheUserEmail(User userDetails){
+        elementActions.writeText(userEmail, userDetails.getUserEmail());
+        return this;
+    }
+    public PracticeFormPage clickTheGender(){
+        Random random= new Random();
+        List<WebElement> genderBtn= Arrays.asList(genderMale, genderFemale, genderOther);
+        int index = random.nextInt(genderBtn.size());
+        WebElement gender=genderBtn.get(index);
+        elementActions.clickTheButton(gender);
+        return this;
+
+    }
+    public PracticeFormPage fillUpThePhoneNumber(User userDetails){
+        elementActions.writeText(mobileNumber, userDetails.getUserMobileNumber());
+        return this;
+    }
+    public PracticeFormPage chooseDateOfBirth(){
+        WebDriver driver = Driver.getDriver();
+        WebElement dateOfBirth = driver.findElement(By.id("dateOfBirthInput"));
+        dateOfBirth.click();
+        dateOfBirth.sendKeys("10/08/2020");
+        return this;
+
+    }
+    public PracticeFormPage fillUpTheSubject(){
+        elementActions.writeTextWithEnter(subject, "Math");
+        return this;
+    }
+    public PracticeFormPage clickTheHobbies(){
+        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
+        executor.executeScript("window.scrollBy(0,300);");
+        elementActions.clickTheButton(hobbiesReading);
+        return this;
+    }
+    public PracticeFormPage uploadThePicture(){
+        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
+        executor.executeScript("window.scrollBy(0,300);");
+        String filePath = "C:\\\\Users\\\\Victus\\\\IdeaProjects\\\\springproject\\\\Spring2023AutomationFramework\\\\src\\\\main\\\\resources\\\\Снимок экрана 2023-06-30 171420.png";
+        elementActions.writeText(uploadPictures,filePath);
+        return this;
+    }
+    public PracticeFormPage fillUpTheCurrentAddress(User userDetails){
+        elementActions.writeText(currentAddress, userDetails.getUserCurrentAddress());
+        return this;
+    }
+    public PracticeFormPage chooseState(){
+        selectState.sendKeys("N");
+        selectState.sendKeys(Keys.TAB);
+        return this;
+    }
+    public PracticeFormPage chooseCity(){
+        selectCity.sendKeys("D");
+        selectCity.sendKeys(Keys.TAB);
+        return this;
+    }
+    public PracticeFormPage submitBtn(){
+        submit.sendKeys(Keys.ENTER);
+        return this;
+    }
+    public PracticeFormPage fillUpTheForm(User userDetails){
+        return fillUpTheFirstName(userDetails)
+                .fillUpTheLastName(userDetails)
+                .fillUpTheUserEmail(userDetails)
+                .clickTheGender()
+                .fillUpThePhoneNumber(userDetails)
+                .chooseDateOfBirth()
+                .fillUpTheSubject()
+                .clickTheHobbies()
+                .uploadThePicture()
+                .fillUpTheCurrentAddress(userDetails)
+                .chooseState()
+                .chooseCity()
+                .submitBtn();
+
+
+    }
+    }
+

@@ -34,7 +34,7 @@ public class TextBoxPage extends BasePage {
     public WebElement resultPermanentAddress;
 
     public TextBoxPage fillUpTheForm(User userDetails) {
-        elementActions.writeText(userFullName, userDetails.getFullName())
+        elementActions.writeText(userFullName, userDetails.getUserFullName())
                 .writeText(userEmail, userDetails.getUserEmail())
                 .writeText(userCurrentAddress, userDetails.getUserCurrentAddress())
                 .writeText(userPermanentAddress, userDetails.getUserPermanentAddress())

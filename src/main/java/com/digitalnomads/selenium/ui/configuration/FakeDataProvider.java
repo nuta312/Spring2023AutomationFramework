@@ -9,42 +9,44 @@ public class FakeDataProvider {
 
     Faker faker = new Faker();
 
-    public String generateFakeEmail() {
-
-        return faker.internet().emailAddress();
-    }
-
-    public String generateFullName() {
-
+    public String generateFakeFullName(){
         return faker.name().fullName();
     }
 
-    public String generateFakeCurrentAddress() {
-        return faker.address().fullAddress();
-
+    public  String generateUserEmail(){
+        return faker.internet().emailAddress();
     }
 
-    public String generateFakePermanentAddress() {
+    public String generateCurrentAddress(){
+        return  faker.address().fullAddress();
+    }
+
+    public String generatePermanentAddress(){
         return faker.address().secondaryAddress();
+    }
 
-}
+    public String generatePassword(){
+        return faker.internet().password();
+    }
 
-    public String generateFakeFirstName() {
+    public String generateFirstName(){
         return faker.name().firstName();
     }
-    public String generateFakeLastName(){
 
+    public String generateLastName(){
         return faker.name().lastName();
-
     }
 
-    public String generateFakePhoneNumber(){
-        return faker.phoneNumber().cellPhone();
-
-
-
+    public String generateMobileNumber(){
+        return faker.phoneNumber().subscriberNumber(11);
     }
+
+
 
 
 
 }
+
+
+
+
