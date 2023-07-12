@@ -29,6 +29,9 @@ public class LoginPage {
     @FindBy(id = "newUser")
     public WebElement newUser;
 
+    @FindBy(id = "name")
+    public WebElement messageName;
+
     public void logIn(User user){
         elementActions.writeText(userName, user.getUserFullName()).writeText(password,user.getPassword())
                 .clickTheButton(loginBtn);
