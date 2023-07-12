@@ -6,15 +6,12 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import selenium.demo.BaseTest;
 
-public class Tests {
-    Faker faker = new Faker();
+public class Tests extends BaseTest {
     User user = User.builder().userFirstName(faker.name().firstName()).userLastName(faker.name().lastName())
             .userFullName(faker.name().fullName()).password("Adg1adg2*").build();
     User userFake = User.builder().userFullName(faker.name().fullName()).password(faker.internet().password()).build();
-    RegistrePage registrePage = new RegistrePage();
-    LoginPage loginPage = new LoginPage();
-    WebDriver driver = Driver.getDriver();
 
     @Test
     void testLoginWithValidData() throws InterruptedException {
@@ -28,4 +25,6 @@ public class Tests {
         System.out.println(loginPage.messageName.getText().trim());
         Assert.assertEquals(loginPage.messageName.getText().trim(),"Invalid username or password!");
     }
+
+
 }
