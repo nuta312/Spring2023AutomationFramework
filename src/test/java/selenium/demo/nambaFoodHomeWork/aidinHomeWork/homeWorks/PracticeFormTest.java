@@ -1,4 +1,4 @@
-package selenium.demo.nambaFoodHomeWork.aidinHomeWork;
+package selenium.demo.nambaFoodHomeWork.aidinHomeWork.homeWorks;
 
 import com.digitalnomads.selenium.ui.helper.ElementActions;
 import org.openqa.selenium.By;

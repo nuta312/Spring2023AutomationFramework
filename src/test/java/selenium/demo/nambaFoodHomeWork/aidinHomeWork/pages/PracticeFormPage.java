@@ -85,7 +85,7 @@ public class PracticeFormPage extends BaseTest {
             case "reading": hobbiesReading.click(); break;
             case "music": hobbiesMusic.click(); break;
         }
-//.writeText(this.uploadPicture,"/Users/aidiniskenderov/Downloads/Курсовая\\ Эконом\\ орг\\ \\(Айдин\\).docx");
+//        elementActions.writeText(this.uploadPicture,"/Users/aidiniskenderov/Desktop/Снимок\\ экрана\\ 2023-06-22\\ в\\ 21.29.09.png ");
         actions.writeText(this.currentAddress,currentAddress);
         actions.scrollToElement(this.currentAddress);
         selectState.sendKeys("NCR",Keys.TAB);

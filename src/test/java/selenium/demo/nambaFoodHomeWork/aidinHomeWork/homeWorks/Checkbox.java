@@ -1,4 +1,4 @@
-package selenium.demo.nambaFoodHomeWork.aidinHomeWork;
+package selenium.demo.nambaFoodHomeWork.aidinHomeWork.homeWorks;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
