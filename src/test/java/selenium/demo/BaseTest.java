@@ -9,10 +9,12 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import selenium.demo.nambaFoodHomeWork.aidinHomeWork.users.LoginPage;
-import selenium.demo.nambaFoodHomeWork.aidinHomeWork.users.RegistrePage;
+import selenium.demo.nambaFoodHomeWork.aidinHomeWork.login.LoginPage;
+import selenium.demo.nambaFoodHomeWork.aidinHomeWork.login.ProfilePage;
+import selenium.demo.nambaFoodHomeWork.aidinHomeWork.login.RegistrePage;
 
 public abstract class BaseTest {
+    public ProfilePage profilePage = new ProfilePage();
     public RegistrePage registrePage = new RegistrePage();
     public LoginPage loginPage = new LoginPage();
     public  PracticeFormPage practiceFormPage;

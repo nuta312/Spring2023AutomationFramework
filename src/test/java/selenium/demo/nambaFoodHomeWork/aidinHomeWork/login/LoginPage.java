@@ -1,15 +1,11 @@
-package selenium.demo.nambaFoodHomeWork.aidinHomeWork.users;
+package selenium.demo.nambaFoodHomeWork.aidinHomeWork.login;
 
 import com.digitalnomads.selenium.ui.drivers.Driver;
 import com.digitalnomads.selenium.ui.helper.ElementActions;
 import com.digitalnomads.selenium.ui.models.User;
-import com.github.javafaker.Faker;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import selenium.demo.BaseTest;
 
 public class LoginPage {
     ElementActions elementActions = new ElementActions();
