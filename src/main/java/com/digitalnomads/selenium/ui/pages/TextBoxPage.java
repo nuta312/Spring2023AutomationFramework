@@ -39,10 +39,10 @@ public class TextBoxPage extends BasePage{
     public WebElement resultPermanentAddress;
 
     public TextBoxPage fillUpTheForm(User userDetails){
-        elementActions.writeText(userFullName,userDetails.getUserFullName())
-                .writeText(userEmail,userDetails.getUserEmail())
-                .writeText(currentAddress,userDetails.getUserCurrentAddress())
-                .writeText(permanentAddress,userDetails.getUserPermanentAddress())
+        elementActions.writeText(userFullName,userDetails.fullName)
+                .writeText(userEmail,userDetails.email)
+                .writeText(currentAddress,userDetails.currentAddress)
+                .writeText(permanentAddress,userDetails.permanentAddress)
                 .scrollToElement(submitBtn)
                 .clickTheButton(submitBtn);
         return this;

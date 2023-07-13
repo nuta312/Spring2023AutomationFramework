@@ -31,8 +31,8 @@ public class RegistrePage {
     public User createNewUser(User user) throws InterruptedException {
         driver.navigate().to("https://demoqa.com/login");
         driver.findElement(By.id("newUser")).click();
-        elementActions.writeText(firstname,user.getUserFirstName()).writeText(lastName,user.getUserLastName())
-                .writeText(userName,user.getUserFullName()).writeText(password,user.getPassword());
+        elementActions.writeText(firstname,user.firstName).writeText(lastName,user.lastName)
+                .writeText(userName,user.fullName).writeText(password,user.password);
         Thread.sleep(20000);
         elementActions.clickTheButton(driver.findElement(By.id("register")));
         Thread.sleep(5000);

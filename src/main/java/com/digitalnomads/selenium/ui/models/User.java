@@ -11,13 +11,14 @@ import lombok.*;
 @Builder
 public class User {
 
-    private String userFirstName;
-    private String userLastName;
-    private String password;
-    private String userFullName;
-    private String userEmail;
-    private String userCurrentAddress;
-    private String userPermanentAddress;
-
-
+    public String firstName;
+    public String lastName;
+    public String fullName;
+    public String password;
+    public String email;
+    public String currentAddress;
+    public String permanentAddress;
+    public String age;
+    public String salary;
+    public String department;
 }

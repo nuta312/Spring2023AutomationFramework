@@ -29,7 +29,7 @@ public class LoginPage {
     public WebElement messageName;
 
     public void logIn(User user){
-        elementActions.writeText(userName, user.getUserFullName()).writeText(password,user.getPassword())
+        elementActions.writeText(userName, user.fullName).writeText(password,user.getPassword())
                 .clickTheButton(loginBtn);
     }
 
