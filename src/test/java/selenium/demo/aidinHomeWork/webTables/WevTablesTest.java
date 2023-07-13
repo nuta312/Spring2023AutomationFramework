@@ -12,18 +12,30 @@ public class WevTablesTest extends BaseTest {
     WebTablesPage webTablesPage = new WebTablesPage();
     NewUserPage newUserPage = new NewUserPage();
     WebTablesUsers users = new WebTablesUsers();
+
     @Test
     public void demo() throws InterruptedException {
-        ArrayList<String> dataOfUsers = new ArrayList<>();
         webTablesPage.deleteAllUsers();
-        webTablesPage.addUserBtn.click();
-        newUserPage.createNewUser(users.aidin);
-        users.addToList(dataOfUsers,users.aidin);
+
+        ArrayList<String> dataOfUser1 = new ArrayList<>();
+        ArrayList<String> dataOfUser2 = new ArrayList<>();
+        ArrayList<String> dataOfUser3 = new ArrayList<>();
+
+        users.addToList(dataOfUser1,newUserPage.createNewUser(users.aidin));
+        users.addToList(dataOfUser2,newUserPage.createNewUser(users.manas));
+        users.addToList(dataOfUser3,newUserPage.createNewUser(users.fake));
+
+        chekUsers(dataOfUser1,"(//div[@role=\"row\"])[2]//div[");
+        chekUsers(dataOfUser2,"(//div[@role=\"row\"])[3]//div[");
+        chekUsers(dataOfUser3,"(//div[@role=\"row\"])[4]//div[");
+    }
+
+    public void chekUsers(ArrayList<String> dataOfUsers,String xpath){
         for (int i = 1; i <= dataOfUsers.size(); i++) {
-            WebElement element = driver.findElement(By.xpath("(//div[@role=\"row\"])[2]//div[" + i + "]"));
+            WebElement element = driver.findElement(By.xpath(xpath + i + "]"));
             Assert.assertEquals(element.getText(),dataOfUsers.get(i-1));
             System.out.println(element.getText());
         }
-        Thread.sleep(5000);
+        System.out.println("______________________");
     }
 }

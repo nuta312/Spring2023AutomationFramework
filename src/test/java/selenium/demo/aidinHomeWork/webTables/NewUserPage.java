@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import selenium.demo.BaseTest;
 
 public class NewUserPage extends BaseTest {
+    WebTablesPage webTablesPage = new WebTablesPage();
     ElementActions elementActions = new ElementActions();
     public NewUserPage(){
         PageFactory.initElements(Driver.getDriver(), this);
@@ -35,6 +36,7 @@ public class NewUserPage extends BaseTest {
     public WebElement submit;
 
     public User createNewUser(User user){
+        webTablesPage.addUserBtn.click();
         elementActions.writeText(firstName,user.firstName)
                 .writeText(lastName,user.lastName).writeText(email,user.email)
                 .writeText(age,user.age).writeText(salary,user.salary)
