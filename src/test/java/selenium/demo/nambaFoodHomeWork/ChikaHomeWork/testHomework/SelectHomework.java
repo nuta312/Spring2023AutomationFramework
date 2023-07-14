@@ -8,5 +8,6 @@ public class SelectHomework extends BaseTest {
     public  void  testselectdemo() throws InterruptedException {
         driver.get("https://demoqa.com/select-menu");
         selectHelper.getSelectRandom(selectPage.select);
+
     }
 }

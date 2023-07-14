@@ -1,8 +1,11 @@
 package selenium.demo.demoqa;
 
 import com.digitalnomads.selenium.ui.config.FakeDataProvider;
+import com.digitalnomads.selenium.ui.helper.ElementActions;
 import com.digitalnomads.selenium.ui.models.User;
 import com.digitalnomads.selenium.ui.pages.TextBoxPage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import selenium.demo.BaseTest;
@@ -33,5 +36,12 @@ public class TextBoxTest extends BaseTest {
         Assert.assertTrue(textBoxPage1.resultPermanentAddress.getText().contains(userPermanentAddress));
 
     }
+    @Test
+    void textBoxTest2() throws InterruptedException {
+        driver.get("https://demoqa.com/text-box");
+        WebElement element = driver.findElement(By.id("submit"));
+         elementActions.scrollToElement(element).clickTheButton(element);
+         Thread.sleep(2000);
+    }
 
-}
+    }

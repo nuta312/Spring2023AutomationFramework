@@ -13,25 +13,26 @@ import java.time.Duration;
 
 public class ElementActions {
 
-    public ElementActions waitButtonToBeClickable(WebElement element){
+    public ElementActions waitButtonToBeClickable(WebElement element) {
         new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15))
                 .until(ExpectedConditions.elementToBeClickable(element));
         return this;
     }
 
-    public ElementActions waitElementToBeDisplayed(WebElement element){
-         new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15))
+    public ElementActions waitElementToBeDisplayed(WebElement element) {
+        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15))
                 .until(ExpectedConditions.visibilityOf(element));
         return this;
     }
 
-    public ElementActions clickTheButton (WebElement element){
+    public ElementActions clickTheButton(WebElement element) {
         waitButtonToBeClickable(element);
+        highlightElement(element);
         element.click();
         return this;
     }
 
-    public ElementActions writeText(WebElement element, String text){
+    public ElementActions writeText(WebElement element, String text) {
         waitElementToBeDisplayed(element);
         element.sendKeys(text);
         return this;
@@ -42,16 +43,28 @@ public class ElementActions {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
         return this;
     }
-    public ElementActions scrollActions (WebElement element){
+
+    public ElementActions scrollActions(WebElement element) {
         WebDriver driver = Driver.getDriver();
         Actions actions = new Actions(driver);
         actions.moveToElement(element);
         return this;
     }
 
-    public ElementActions enterClick (WebElement element,String txt){
-       element.sendKeys(txt);
-       element.sendKeys(Keys.TAB);
+    public ElementActions enterClick(WebElement element, String txt) {
+        element.sendKeys(txt);
+        element.sendKeys(Keys.TAB);
+        return this;
+    }
+
+    public ElementActions clickWithJs(WebElement element) {
+        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
+        executor.executeScript("arguments[0].click();", element);
+        return this;
+    }
+    public ElementActions highlightElement(WebElement element) {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) Driver.getDriver();
+        jsExecutor.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "background-color: red");
         return this;
     }
 }
