@@ -1,6 +1,7 @@
 package selenium.demo;
 import com.digitalnomads.selenium.ui.configuration.FakeDataProvider;
 import com.digitalnomads.selenium.ui.driverFactory.Driver;
+import com.digitalnomads.selenium.ui.helper.DropDownHelper;
 import com.digitalnomads.selenium.ui.pages.*;
 import com.digitalnomads.selenium.ui.helper.ElementActions;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +22,9 @@ public abstract class BaseTest {
     public ProfilePage profilePage;
     public FakeDataProvider fakeDataProvider;
 
+    public WebTablesPage webTablesPage;
+    public DropDownHelper dropDownHelper;
+
 
     @BeforeClass
     public void setUpBrowser() {
@@ -33,7 +37,8 @@ public abstract class BaseTest {
         registerPage = new RegisterPage();
         profilePage = new ProfilePage();
         fakeDataProvider= new FakeDataProvider();
-
+        webTablesPage = new WebTablesPage();
+        dropDownHelper = new DropDownHelper();
     }
 
     @AfterClass

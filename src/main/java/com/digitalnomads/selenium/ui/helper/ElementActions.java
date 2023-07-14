@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class ElementActions {
 
@@ -38,33 +39,39 @@ public class ElementActions {
         element.sendKeys(txt);
         return this;
     }
-    public ElementActions scrollToElement( WebElement element) {
+
+    public ElementActions scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", element);
-   return this;
+        return this;
     }
-    public ElementActions moveToElement(WebElement element){
+
+    public ElementActions moveToElement(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
         return this;
 
-   }
-   public ElementActions writeTextWithEnter(WebElement element, String txt){
+    }
+
+    public ElementActions writeTextWithEnter(WebElement element, String txt) {
         waitElementToBeDisplayed(element);
-        element.sendKeys(txt,Keys.ARROW_DOWN);
+        element.sendKeys(txt, Keys.ARROW_DOWN);
         element.sendKeys(Keys.ENTER);
         return this;
 
-   }
-   public ElementActions clickWithJS(WebElement element){
+    }
+
+    public ElementActions clickWithJS(WebElement element) {
         JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
-       executor.executeScript("arguments[0].click();", element);
-       return this;
-   }
-   public ElementActions highlightElement(WebElement element){
-       JavascriptExecutor jsExecutor = (JavascriptExecutor) Driver.getDriver();
-       jsExecutor.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "border: 2px solid red");
-       return this;
-   }
+        executor.executeScript("arguments[0].click();", element);
+        return this;
+    }
+
+    public ElementActions highlightElement(WebElement element) {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) Driver.getDriver();
+        jsExecutor.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "border: 2px solid red");
+        return this;
+    }
+
 }
 

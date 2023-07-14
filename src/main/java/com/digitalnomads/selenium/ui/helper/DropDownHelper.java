@@ -34,6 +34,19 @@ public class DropDownHelper {
         }
         return valueList;
     }
+
+    public static String checkValueByText(List<WebElement> elements, String value) {
+        int i = 0;
+        WebElement result = null;
+        WebElement result1 = null;
+        for (i = 0; i < elements.size(); i++) {
+            if (elements.get(i).getText().contains(value)) {
+                result = elements.get(i);
+                break;
+            }
+        }
+        return (i == elements.size()) ? result1.getText() : result.getText();
+    }
 //    public static void selectRandomColor(WebElement element){
 //        Random random= new Random();
 //        List <String> colors= List.of("Red", "Black", "Yellow", "Purple", "White" +
