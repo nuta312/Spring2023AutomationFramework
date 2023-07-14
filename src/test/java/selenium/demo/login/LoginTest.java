@@ -2,11 +2,9 @@ package selenium.demo.login;
 
 import com.digitalnomads.selenium.ui.driverFactory.Driver;
 import com.github.javafaker.Faker;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import selenium.demo.BaseTest;
@@ -253,4 +251,24 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(wrongPasswordMessage.isDisplayed());
 
     }
-}
+
+
+    @Test
+    void DateOFBirth() throws InterruptedException {
+        driver.get("https://demoqa.com/automation-practice-form");
+        JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+        js.executeScript("window.scrollBy(0,100)");
+        WebElement subject = driver.findElement(By.xpath("//*[@class='subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3']"));
+        subject.click();
+        subject.sendKeys("M");
+        subject.sendKeys(Keys.ENTER);
+        Thread.sleep(5000);
+
+
+    }
+//    @Test (testName = "Login with valid credentials")
+//    void loginWithValidCredentials(){
+//        driver.get();
+//        loginPage.enterUsername()
+
+    }

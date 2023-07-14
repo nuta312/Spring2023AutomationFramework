@@ -38,21 +38,23 @@ public class SelectMenu extends BasePage {
     @FindBy (xpath = "//option[@value='10']")
     public WebElement selectAqua;
 
-    public void selectColors(){
+    public void selectColors() {
         selectMenuColors.sendKeys(Keys.ENTER);
 
-        Random random= new Random();
-        List<WebElement> listOfColors= Arrays.asList(selectAqua, selectMagenta, selectVoilet, selectWhite, selectBlack,
-                selectIndigo, selectGreen, selectPurple,selectRed, selectBlue,selectYellow);
+        Random random = new Random();
+        List<WebElement> listOfColors = Arrays.asList(selectAqua, selectMagenta, selectVoilet, selectWhite, selectBlack,
+                selectIndigo, selectGreen, selectPurple, selectRed, selectBlue, selectYellow);
         int index = random.nextInt(listOfColors.size());
         Select select = new Select(selectMenuColors);
         select.selectByIndex(index);
 
         Driver.getDriver().findElement(By.xpath("//div[@class = 'main-header']")).click();
 
+
+        }
     }
 
 
-    }
+
 
 

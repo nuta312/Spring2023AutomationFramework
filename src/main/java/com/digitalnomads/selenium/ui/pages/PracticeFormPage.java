@@ -106,6 +106,12 @@ public class PracticeFormPage extends  BasePage{
     }
     public PracticeFormPage fillUpTheSubject(){
         elementActions.writeTextWithEnter(subject, "Math");
+//        subject.sendKeys("M");
+//        subject.sendKeys(Keys.ENTER);
+//        subject.sendKeys("A");
+//        subject.sendKeys(Keys.ENTER);
+//        subject.sendKeys("B");
+//        subject.sendKeys(Keys.ENTER);
         return this;
     }
     public PracticeFormPage clickTheHobbies(){

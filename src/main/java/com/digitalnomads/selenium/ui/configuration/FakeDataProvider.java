@@ -1,6 +1,7 @@
 package com.digitalnomads.selenium.ui.configuration;
 
 import com.digitalnomads.selenium.ui.models.User;
+import com.digitalnomads.selenium.ui.models.UserWebTablesForm;
 import com.github.javafaker.Faker;
 
 import java.util.List;
@@ -40,12 +41,21 @@ public class FakeDataProvider {
     public String generateMobileNumber(){
         return faker.phoneNumber().subscriberNumber(11);
     }
+//    public UserWebTablesForm generateWebTablesForm(){
+//        return UserWebTablesForm.builder()
+//                .firstName(faker.name().firstName())
+//                .lastName(faker.name().lastName())
+//                .email(faker.internet().emailAddress())
+//                .age(faker.number().numberBetween(12,60))
+//                .salary(faker.number().numberBetween(5000, 1000000))
+//                .department("Insurance");
+
+    }
 
 
 
 
 
-}
 
 
 

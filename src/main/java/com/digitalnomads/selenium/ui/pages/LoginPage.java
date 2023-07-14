@@ -14,7 +14,21 @@ public class LoginPage extends BasePage {
     @FindBy(id = "login")
     public WebElement loginBtn;
 
+    @FindBy(id="name")
+    public WebElement errorMessage;
 
+public   LoginPage enterUsername(String username){
+    elementActions.writeText(userNameField, username);
+    return this;
+}
+public  LoginPage enterPassword(String password){
+    elementActions.writeText(userPasswordField, password);
+    return this;
+}
+public LoginPage clickLogBnt(){
+    elementActions.clickTheButton(loginBtn);
+    return this;
 
+}
 
 }

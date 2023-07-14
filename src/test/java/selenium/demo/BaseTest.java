@@ -1,9 +1,7 @@
 package selenium.demo;
+import com.digitalnomads.selenium.ui.configuration.FakeDataProvider;
 import com.digitalnomads.selenium.ui.driverFactory.Driver;
-import com.digitalnomads.selenium.ui.pages.LoginPage;
-import com.digitalnomads.selenium.ui.pages.PracticeFormPage;
-import com.digitalnomads.selenium.ui.pages.RegisterPage;
-import com.digitalnomads.selenium.ui.pages.TextBoxPage;
+import com.digitalnomads.selenium.ui.pages.*;
 import com.digitalnomads.selenium.ui.helper.ElementActions;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -14,13 +12,14 @@ import selenium.demo.login.LoginTest;
 public abstract class BaseTest {
     public WebDriver driver;
     public ElementActions elementActions;
-
     public TextBoxPage textBoxPage;
     public PracticeFormPage practiceFormPage;
     public LoginTest loginTest;
     public LoginPage loginPage;
     public RegisterPage registerPage;
 
+    public ProfilePage profilePage;
+    public FakeDataProvider fakeDataProvider;
 
 
     @BeforeClass
@@ -32,6 +31,8 @@ public abstract class BaseTest {
         loginTest = new LoginTest();
         loginPage = new LoginPage();
         registerPage = new RegisterPage();
+        profilePage = new ProfilePage();
+        fakeDataProvider= new FakeDataProvider();
 
     }
 
