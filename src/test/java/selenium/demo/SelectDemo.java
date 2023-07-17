@@ -3,7 +3,6 @@ package selenium.demo;
 import com.digitalnomads.selenium.ui.helper.DropDownHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import static com.digitalnomads.selenium.ui.helper.DropDownHelper.selectUsingVisibleText;

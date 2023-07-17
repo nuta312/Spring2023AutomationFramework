@@ -1,7 +1,6 @@
 package selenium.demo.demoqa;
 
 import com.digitalnomads.selenium.ui.config.FakeDataProvider;
-import com.digitalnomads.selenium.ui.helper.ElementActions;
 import com.digitalnomads.selenium.ui.models.User;
 import com.digitalnomads.selenium.ui.pages.TextBoxPage;
 import org.openqa.selenium.By;

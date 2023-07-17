@@ -3,7 +3,6 @@ package com.digitalnomads.selenium.ui.helper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
