@@ -2,12 +2,8 @@ package selenium.demo.alertTest;
 
 import com.digitalnomads.selenium.ui.helper.AlertHelper;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import selenium.demo.BaseTest;
-
-import java.time.Duration;
 
 public class AlertDemoTest extends BaseTest {
     @Test
