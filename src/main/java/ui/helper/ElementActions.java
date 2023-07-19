@@ -1,12 +1,16 @@
-package ui.customizedForWebElement;
+package ui.helper;
 
 import com.digitalnomads.selenium.WebElementActions;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ui.driversFactory.MainDriver;
 
 import java.time.Duration;
+
 
 public class ElementActions {
 
@@ -40,4 +44,38 @@ public class ElementActions {
        element.click();
        return this;
     }
+
+    public ElementActions clickAndFillUpAndTab(WebElement element, String text){
+        clickTheButton(element);
+        element.sendKeys(text);
+        element.sendKeys(Keys.TAB);
+        return this;
+    }
+    public ElementActions scrollDown(WebElement element){
+        waitWebElementTobeDisplayed(element);
+        WebElementActions.scrollToElement(MainDriver.getDriver(),element);
+        return this;
+    }
+
+    public ElementActions clearAllEnterNewText(WebElement element, String txt) throws InterruptedException {
+        waitWebElementTobeDisplayed(element);
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        element.sendKeys(txt);
+        Thread.sleep(2000);
+        element.sendKeys(Keys.ESCAPE);
+        return this;
+    }
+
+    public ElementActions attachFile(WebElement element, String path){
+        String filePath = path;
+        element.sendKeys(filePath);
+        return this;
+    }
+
+    public ElementActions scrollDownToBottomPage(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        return this;
+    }
+
 }
