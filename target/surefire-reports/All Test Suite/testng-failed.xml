@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="C:/Users/tilek/IdeaProjects/Spring2023AutomationFramework(failed)" verbose="0">
+    <classes>
+      <class name="selenium.demo.demoQa.loginPageTest.LoginPageTest">
+        <methods>
+          <include name="loginWithInvalidPassword"/>
+          <include name="loginWithInvalidUserName"/>
+          <include name="registerWithRightCredentials"/>
+          <include name="setUpBrowser"/>
+          <include name="loginWithRightCredentials"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- selenium.demo.demoQa.loginPageTest.LoginPageTest -->
+    </classes>
+  </test> <!-- C:/Users/tilek/IdeaProjects/Spring2023AutomationFramework(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

@@ -39,4 +39,8 @@ public class FakeDataProvider {
         return faker.address().secondaryAddress();
     }
 
+    public String generateFakePassword(){
+        return faker.internet().password(6,10,true,true,true);
+    }
+
 }

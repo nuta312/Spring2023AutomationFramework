@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/tilek/IdeaProjects/Spring2023AutomationFramework">
+        <classes>
+            <class name="selenium.demo.demoQa.loginPageTest.LoginPageTest">
+                <methods>
+                    <include name="loginWithRightCredentials"/>
+                    <include name="loginWithInvalidUserName"/>
+                    <include name="loginWithInvalidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
