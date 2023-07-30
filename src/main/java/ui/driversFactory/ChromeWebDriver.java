@@ -12,7 +12,6 @@ public class ChromeWebDriver {
     public static WebDriver loadWebDriver(){
         WebDriverManager.chromedriver().setup();
         ChromeOptions options=new ChromeOptions();
-        options.addArguments("--disable-extensions");
         if(Boolean.parseBoolean(ConfigReader.getPropertyOf("headless"))){
             options.addArguments("--headless");
         }

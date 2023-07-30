@@ -3,6 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/tilek/IdeaProjects/Spring2023AutomationFramework">
         <classes>
+
             <class name="selenium.demo.demoQa.loginPageTest.LoginPageTest">
                 <methods>
                     <include name="loginWithRightCredentials"/>

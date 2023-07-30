@@ -29,6 +29,7 @@ public class LoginPage extends BasePage{
     }
     @Step("Enter password")
     public LoginPage enterPassword(String password){
+        elementActions.scrollDown(passwordField);
         elementActions.inputText(passwordField, password);
         return this;
     }
@@ -42,6 +43,7 @@ public class LoginPage extends BasePage{
 
     @Step("Click new user button")
     public LoginPage clickNewUserButton(){
+        elementActions.scrollDown(newUserButton);
         elementActions.clickTheButton(newUserButton);
         return this;
     }
