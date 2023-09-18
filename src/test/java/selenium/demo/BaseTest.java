@@ -1,16 +1,15 @@
 package selenium.demo;
 
 
+import com.digitalnomads.selenium.AllureReportListener;
 import com.digitalnomads.selenium.ui.config.FakeDataProvider;
 import com.digitalnomads.selenium.ui.helper.ElementActions;
 import com.digitalnomads.selenium.ui.drivers.Driver;
-import com.digitalnomads.selenium.ui.models.Student;
-import com.digitalnomads.selenium.ui.pages.PracticeFormPage;
-import com.digitalnomads.selenium.ui.pages.SubmitPage;
-import com.digitalnomads.selenium.ui.pages.TextBoxPage;
+import com.digitalnomads.selenium.ui.pages.*;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.*;
+
+@Listeners(AllureReportListener.class)
 
 public abstract class BaseTest {
 
@@ -19,6 +18,8 @@ public abstract class BaseTest {
     public TextBoxPage textBoxPage;
     public FakeDataProvider fakeDataProvider;
     public SubmitPage submitPage;
+    public LoginPage loginPage;
+    public ProfilePage profilePage;
     public PracticeFormPage practiceFormPage;
 
 
@@ -30,6 +31,8 @@ public abstract class BaseTest {
         fakeDataProvider = new FakeDataProvider();
         submitPage = new SubmitPage();
         practiceFormPage = new PracticeFormPage();
+        loginPage = new LoginPage();
+        profilePage = new ProfilePage();
     }
     @AfterClass
     public void tearDown(){

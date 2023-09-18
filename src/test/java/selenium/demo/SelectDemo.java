@@ -11,10 +11,12 @@ public class SelectDemo extends BaseTest{
     void demo() throws InterruptedException {
         driver.get("https://demoqa.com/select-menu");
         WebElement element = driver.findElement(By.id("oldSelectMenu"));
-        selectUsingVisibleText(element,"Black");
-        selectUsingValue(element,"5");
-        selectUsingIndex(element,3);
+//        selectUsingVisibleText(element,"Black");
+//        selectUsingValue(element,"5");
+//        selectUsingIndex(element,3);
 
-        Thread.sleep(4000);
+        chooseRandomValueFromDropDown(element);
+
+
     }
 }

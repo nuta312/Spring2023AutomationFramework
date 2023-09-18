@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeTest;
 import java.time.Duration;
 
 public abstract class BaseTest {
-    public WebDriver driver;
+    public static WebDriver driver;
 
     @BeforeClass
     public void setUpBrowser() {

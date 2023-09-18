@@ -26,6 +26,7 @@ public class ElementActions {
 
     public ElementActions clickTheButton (WebElement element){
         waitButtonToBeClickable(element);
+        highlightElement(element);
         element.click();
         return this;
     }
@@ -52,6 +53,12 @@ public class ElementActions {
         waitElementToBeDisplayed(element);
         element.sendKeys(txt, Keys.ARROW_DOWN);
         element.sendKeys(Keys.ENTER);
+        return this;
+    }
+
+    public ElementActions highlightElement(WebElement element){
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) Driver.getDriver();
+        jsExecutor.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "border: 2px solid red");
         return this;
     }
 }

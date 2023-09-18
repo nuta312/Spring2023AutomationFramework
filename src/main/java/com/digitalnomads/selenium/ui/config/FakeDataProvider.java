@@ -27,6 +27,9 @@ public class FakeDataProvider {
     public String generateFakePermanentAddress(){
         return faker.address().secondaryAddress();
     }
+    public String generateFakePassword(){
+        return faker.internet().password(8,20);
+    }
 
     public Student generateStudentsForm(){
        return  Student.builder()

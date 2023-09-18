@@ -4,6 +4,7 @@ package com.digitalnomads.selenium.ui.models;
 import lombok.Builder;
 import lombok.Data;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -38,6 +39,11 @@ public class Student {
         }
 
         return "";
+    }
+
+    public static String getFilenameFromPath(String picturePath) {
+        File file = new File(picturePath);
+        return file.getName();
     }
 
 }

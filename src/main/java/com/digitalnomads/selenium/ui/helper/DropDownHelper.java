@@ -5,6 +5,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 public class DropDownHelper {
 
@@ -32,4 +33,13 @@ public class DropDownHelper {
         }
         return valueList;
     }
+
+    public static void chooseRandomValueFromDropDown(WebElement locator){
+        List<String> valueList = getAllDropDownValues(locator);
+        Random random = new Random();
+        int randomNumber = random.nextInt(valueList.size());
+        selectUsingIndex(locator, randomNumber);
+    }
+
+
 }
